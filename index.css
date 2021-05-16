@@ -1,0 +1,259 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    width:100%;
+    height:100%;
+    position: relative;
+    letter-spacing: 2px;
+    font-family: consolas;
+}
+
+body #home-main header{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:60%;
+    background: url(./imgs/indexBG.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    transition: 1s;
+}
+
+body #home-main #navigation-section{
+    position:absolute;
+    top:65%;
+    width:100%;
+    height:6%;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 1vw;
+    transition: 1s;
+}
+
+body #home-main #navigation-section h2{
+    position: absolute;
+    line-height: 2em;
+    cursor: pointer;
+}
+
+
+body #home-main #navigation-section #home-h2{
+    left:50%;
+}
+
+body #home-main #navigation-section #garage-h2{
+    left:10%;
+}
+
+body #home-main #navigation-section #about-h2{
+    right:10%;
+}
+
+body #home-main #navigation-section #unknown-h2{
+    right:28%;
+}
+
+body #home-main #navigation-section #schedule-h2{
+    left:28%;
+}
+
+body #home-main .fade-div{
+    position: absolute;
+    width:100%;
+    height:6%;
+    transition: 1s;
+}
+
+body #home-main #fade-div-1{
+    top:70%;
+    background-color:#262626;
+}
+
+body #home-main #fade-div-2{
+    top:76%;
+    background-color:#333333;
+}
+
+body #home-main #fade-div-3{
+    top:82%;
+    background-color:#404040;
+}
+
+body #home-main #fade-div-4{
+    top:88%;
+    background-color:#4d4d4d;
+}
+
+body #home-main #fade-div-5{
+    top:94%;
+    background-color:#595959;
+}
+
+body #garage-main{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    visibility:hidden;
+}
+
+body #garage-main #left-section-main{
+    position:absolute;
+    top:6%;
+    left:-25%;
+    width:25%;
+    height:94%;
+    background: #2A2B2DFF;
+    opacity: 0;
+    transition: 1s;
+}
+
+body #garage-main #left-section-main #bars-div{
+   position:absolute;
+   top:1%;
+   left:4%;
+   width:10%;
+   height:5%;
+   cursor:pointer;
+} 
+
+body #garage-main #left-section-main #border-lining{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:10px solid #2DA8D8FF;
+}
+
+body #garage-main #left-section-main #occupy-space-btn{
+    position: absolute;
+    top:50%;
+    left:17%;
+    display: inline-block;
+    padding: 10px 30px;
+    color: rgba(255, 255, 255, 0.4);
+    background: #262c37;
+    letter-spacing: 2px;
+    font-size: 1vw;
+    transition: 0.5s;
+    text-decoration: none;
+    display: none;
+}
+
+body #garage-main #left-section-main #occupy-space-btn:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+body #garage-main #left-section-main #occupy-space-btn span{
+    display: block;
+    position:absolute;
+    background: #2894ff;
+}
+
+body #garage-main #left-section-main #occupy-space-btn span:nth-child(1){
+    left:0;
+    bottom:0;
+    width:1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+body #garage-main #left-section-main #occupy-space-btn:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+body #garage-main #left-section-main #occupy-space-btn span:nth-child(2){
+    left:0;
+    bottom:0;
+    width:100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+body #garage-main #left-section-main #occupy-space-btn:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+body #garage-main #left-section-main #occupy-space-btn span:nth-child(3){
+    right:0;
+    bottom:0;
+    width:1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+body #garage-main #left-section-main #occupy-space-btn:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+body #garage-main #left-section-main #occupy-space-btn span:nth-child(4){
+    left:0;
+    top:0;
+    width:100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+body #garage-main #left-section-main #occupy-space-btn:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+body #garage-main #right-section-main{
+    position:absolute;
+    top:6%;
+    right:-25%;
+    width:70%;
+    height:94%;
+    background: #2A2B2DFF;
+    opacity: 0;
+    transition: 1s;
+    overflow: auto;
+}
+
+body #garage-main #right-section-main .garage-spaces{
+    width:20%;
+    height:15%;
+    /* border:1px solid white; */
+    /* border:1px solid #d9514eff; */
+    float:left;
+    margin-top:2%;
+    margin-left:4.3%;
+    margin-bottom: 2%;
+    border-radius: 5%;
+    cursor: pointer;
+    text-align: center;
+    font-size:2vw;
+    line-height: 3.5em;
+    background-color:white;
+    opacity: 0.3;
+    color: #808080;
+}
+
+/* asdf */
