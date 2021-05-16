@@ -28,7 +28,7 @@ function addGarageSpace(){
         }
     }
 }
-//asdf
+
 function garageHover(){
     occupy_space.style.display = 'block'
 }
