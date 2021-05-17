@@ -33,6 +33,7 @@ function garageHover(){
     occupy_space.style.display = 'block'
 }
 //please work
+//again work
 addGarageSpace()
 
 
