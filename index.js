@@ -12,8 +12,14 @@ const unknown_h2 = document.getElementById('unknown-h2')
 
 const garage_main = document.querySelector('body #garage-main')
 const left_section_main = document.getElementById('left-section-main')
+const middle_section_main = document.getElementById('middle-section-main')
 const right_section_main = document.getElementById('right-section-main')
 const occupy_space = document.getElementById('occupy-space-btn')
+
+// every block or space in the garage section
+let garage_capacity = {}
+
+let previous_click_block = ""
 
 function addGarageSpace(){
     for(let i = 1; i <= 10; i++){
@@ -22,20 +28,41 @@ function addGarageSpace(){
             
             row.className = 'garage-spaces'
             row.id = 'garage-space-row' + i + '-col' + j
-            row.textContent = "FREE"
-            row.addEventListener('mouseover' ,garageHover, false)
+            row.addEventListener('click' ,garageHover, false)
+            //row.addEventListener('mouseout' ,garageHoverOut, false)
+            let garage_block = 'G' + i + '-B' + j
+            garage_capacity[garage_block] = 'FREE'
+
+            row.textContent = garage_block
             right_section_main.appendChild(row)
         }
     }
+
+    //garage_capacity['G2-B1'] = 'OCCUPIED'
 }
 
-function garageHover(){
-    occupy_space.style.display = 'block'
+function garageHover(block){
+
+    if(previous_click_block){
+        previous_click_block.style.opacity = '0.3'
+    }
+    
+    block.target.style.opacity = '1'
+    
+    let free_occupied = garage_capacity[block.target.textContent]
+
+    if(free_occupied == 'FREE'){
+        occupy_space.style.display = 'block'
+    }
+
+    previous_click_block = block.target
 }
-//please work
-//again work
+
+// function garageHoverOut(){
+//     occupy_space.style.display = 'none'
+// }
+
 addGarageSpace()
-
 
 function indexTransitionShow(){
     main_header.style.top = '-60%'
@@ -56,6 +83,9 @@ function closeGarage(){
 
     left_section_main.style.opacity = '0'
     left_section_main.style.left = "-25%"
+
+    middle_section_main.style.opacity = '0'
+    middle_section_main.style.left = "-45%"
 
     right_section_main.style.opacity = '0'
     right_section_main.style.right = "-25%"
@@ -85,6 +115,9 @@ garage_h2.addEventListener('click', function(){
 
     left_section_main.style.opacity = '1'
     left_section_main.style.left = "0"
+
+    middle_section_main.style.opacity = '1'
+    middle_section_main.style.left = "25%"
 
     right_section_main.style.opacity = '1'
     right_section_main.style.right = "0"

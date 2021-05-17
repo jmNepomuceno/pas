@@ -132,19 +132,59 @@ body #garage-main #left-section-main #border-lining{
     border:10px solid #2DA8D8FF;
 }
 
-body #garage-main #middle-section-main #border-lining-b{
-    position: absolute;
+body #garage-main #middle-section-main{
+    position:absolute;
     top:6%;
-    left:16%;
-    width:10%;
+    left:-45%;
+    width:5%;
     height:94%;
-    border-right:15px solid #3dafdb;
+    opacity: 0;
+    transition: 1s;
+}
 
+ body #garage-main #middle-section-main #border-lining-b{
+    position: absolute;
+    left:0;
+    width:20%;
+    height:100%;
+    border-right:15px solid #3dafdb;
+}
+
+body #garage-main #middle-section-main #border-lining-c{
+    position: absolute;
+    left:20%;
+    width:20%;
+    height:100%;
+    border-right:15px solid #53b7df;
+}
+
+body #garage-main #middle-section-main #border-lining-d{
+    position: absolute;
+    left:40%;
+    width:20%;
+    height:100%;
+    border-right:15px solid #68c0e3;
+}
+
+body #garage-main #middle-section-main #border-lining-e{
+    position: absolute;
+    left:60%;
+    width:20%;
+    height:100%;
+    border-right:15px solid  #7ec9e7;
+}
+
+body #garage-main #middle-section-main #border-lining-f{
+    position: absolute;
+    left:80%;
+    width:20%;
+    height:100%;
+    border-right:15px solid  #93d2eb;
 }
 
 body #garage-main #left-section-main #occupy-space-btn{
     position: absolute;
-    top:50%;
+    bottom:8%;
     left:17%;
     display: inline-block;
     padding: 10px 30px;
@@ -235,13 +275,60 @@ body #garage-main #left-section-main #occupy-space-btn:hover span:nth-child(4){
     transition-delay: 0.5s;
 }
 
+body #garage-main #left-section-main #km-run-div{
+    position: absolute;
+    top:10%;
+    left:10%;
+    width:80%;
+    height:10%;
+    color: white;
+    /* border:1px solid white; */
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #garage-main #left-section-main #km-run-div label{
+    position: absolute;
+    top:7%;
+    left:5%;
+    font-size: 1.5vw;
+}
+
+body #garage-main #left-section-main #km-run-div img{
+    position: absolute;
+    top:5%;
+    left:68%;
+    width:20%;
+    height:38%;
+}
+
+body #garage-main #left-section-main #km-run-div input{
+    position: absolute;
+    top:50%;
+    left:15%;
+    width:65%;
+    height:45%;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+body #garage-main #left-section-main #km-run-div input:focus{
+    outline: none;
+}
+
+
 body #garage-main #right-section-main{
     position:absolute;
     top:6%;
     right:-25%;
     width:70%;
     height:94%;
-    background: #2A2B2DFF;
+    background: #a9dbef;
     opacity: 0;
     transition: 1s;
     overflow: auto;
@@ -250,18 +337,21 @@ body #garage-main #right-section-main{
 body #garage-main #right-section-main .garage-spaces{
     width:20%;
     height:15%;
-    /* border:1px solid white; */
-    /* border:1px solid #d9514eff; */
+    border:1px solid #2A2B2DFF;
     float:left;
     margin-top:2%;
     margin-left:4.3%;
     margin-bottom: 2%;
     border-radius: 5%;
     cursor: pointer;
-    text-align: center;
+    text-align:center;
     font-size:2vw;
-    line-height: 3.5em;
+    line-height: 6.8em;
     background-color:white;
+    background: url(./imgs/free.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 50%;
     opacity: 0.3;
     color: #808080;
 }
