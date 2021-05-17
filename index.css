@@ -132,6 +132,16 @@ body #garage-main #left-section-main #border-lining{
     border:10px solid #2DA8D8FF;
 }
 
+body #garage-main #middle-section-main #border-lining-b{
+    position: absolute;
+    top:6%;
+    left:16%;
+    width:10%;
+    height:94%;
+    border-right:15px solid #3dafdb;
+
+}
+
 body #garage-main #left-section-main #occupy-space-btn{
     position: absolute;
     top:50%;
