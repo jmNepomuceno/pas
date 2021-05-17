@@ -321,6 +321,85 @@ body #garage-main #left-section-main #km-run-div input:focus{
     outline: none;
 }
 
+body #garage-main #left-section-main #finalize-cancel-div{
+    position:absolute;
+    bottom:3%;
+    left:10%;
+    width: 80%;
+    height:10%;
+    display:none;
+}
+
+body #garage-main #left-section-main #finalize-cancel-div #done-btn{
+    position:absolute;
+    top:30%;
+    left:10%;
+    width:35%;
+    height:50%;
+    cursor: pointer;
+    color: #737373;
+    background: transparent;
+    border:1px solid #006600;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+body #garage-main #left-section-main #finalize-cancel-div #done-btn:focus{
+    outline: none;
+}
+
+body #garage-main #left-section-main #finalize-cancel-div #done-btn:hover{
+    color:#fff;
+    border:1px solid #00cc00;
+}
+
+body #garage-main #left-section-main #finalize-cancel-div #cancel-btn{
+    position:absolute;
+    top:30%;
+    right:10%;
+    width:35%;
+    height:50%;
+    cursor: pointer;
+    color: #737373;
+    background: transparent;
+    border:1px solid #660000;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+body #garage-main #left-section-main #finalize-cancel-div #cancel-btn:focus{
+    outline: none;
+}
+
+body #garage-main #left-section-main #finalize-cancel-div #cancel-btn:hover{
+    color:#fff;
+    border:1px solid #cc0000;
+}
+
+body #garage-main #left-section-main #edit-info-btn{
+    position:absolute;
+    bottom:5%;
+    left:25%;
+    width:50%;
+    height:5%;
+    cursor: pointer;
+    color: #737373;
+    background: transparent;
+    border:1px solid #104256;
+    border-radius: 5px;
+    transition: 0.5s;
+    display: none;
+}
+
+body #garage-main #left-section-main #edit-info-btn:focus{
+    outline: none;
+}
+
+body #garage-main #left-section-main #edit-info-btn:hover{
+    color:#fff;
+    border:1px solid #2da8d8;
+}
+
 
 body #garage-main #right-section-main{
     position:absolute;
@@ -346,7 +425,7 @@ body #garage-main #right-section-main .garage-spaces{
     cursor: pointer;
     text-align:center;
     font-size:2vw;
-    line-height: 6.8em;
+    line-height: 25vh;
     background-color:white;
     background: url(./imgs/free.png);
     background-repeat: no-repeat;
