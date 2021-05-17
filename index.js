@@ -32,7 +32,7 @@ function addGarageSpace(){
 function garageHover(){
     occupy_space.style.display = 'block'
 }
-
+//please work
 addGarageSpace()
 
 
