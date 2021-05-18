@@ -23,6 +23,13 @@ const occupy_done_btn = document.querySelector('body #garage-main #left-section-
 const occupy_cancel_btn = document.querySelector('body #garage-main #left-section-main #finalize-cancel-div #cancel-btn')
 const edit_info_btn = document.querySelector('body #garage-main #left-section-main #edit-info-btn')
 
+const battery_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #battery-replace-btn')
+const battery_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #battery-good-btn')
+
+const brake_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #brake-replace-btn')
+const brake_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #brake-good-btn')
+
+
 const middle_section_main = document.getElementById('middle-section-main')
 const garage_spaces_divs = document.querySelectorAll('body #garage-main #right-section-main .garage-spaces')
 
@@ -98,6 +105,26 @@ function garageHover(block){
     console.log(previous_click_block.textContent)
 }
 
+battery_replace_btn.addEventListener('click', function(){
+    battery_replace_btn.style.backgroundColor = '#d9514eff'
+    battery_good_btn.style.backgroundColor = 'white'
+}, false)
+
+battery_good_btn.addEventListener('click', function(){
+    battery_good_btn.style.backgroundColor = '#2da8d8ff'
+    battery_replace_btn.style.backgroundColor = 'white'
+}, false)
+
+brake_replace_btn.addEventListener('click', function(){
+    brake_replace_btn.style.backgroundColor = '#d9514eff'
+    brake_good_btn.style.backgroundColor = 'white'
+}, false)
+
+brake_good_btn.addEventListener('click', function(){
+    brake_good_btn.style.backgroundColor = '#2da8d8ff'
+    brake_replace_btn.style.backgroundColor = 'white'
+}, false)
+
 occupy_space.addEventListener('click', function(){
    previous_click_block.style.background = 'url(./imgs/car_b.png)'
    previous_click_block.style.backgroundRepeat = 'no-repeat'
@@ -117,11 +144,21 @@ occupy_space.addEventListener('click', function(){
 }, false)
 
 occupy_done_btn.addEventListener('click', function(){
+
+    // handle numbers only for km run text input
+    let km_run_input_int_val
+    km_run_input_int_val = parseInt(km_run_input.value)
+
+    if(km_run_input_int_val !== parseInt(km_run_input_int_val , 10)){
+        alert("Numbers only")
+        return
+    }
+
     garage_capacity[previous_click_block.textContent]['Availability'] = 'OCCUPIED'
-    garage_capacity[previous_click_block.textContent]['Kilometer Run'] = km_run_input.value
+    garage_capacity[previous_click_block.textContent]['Kilometer Run'] = km_run_input_int_val
     garage_capacity[previous_click_block.textContent]['Edit Info Enable'] = true
 
-    km_run_input.value = km_run_input.value + " km"
+    //km_run_input.value = km_run_input.value + " km"
     km_run_div.style.pointerEvents = 'none'
 
     finalize_cancel_div.style.display = 'none'
@@ -154,6 +191,20 @@ occupy_cancel_btn.addEventListener('click', function(){
         }
     }
 }, false)
+
+edit_info_btn.addEventListener('click', function(){
+    let answer = confirm("Are you sure you want to edit this?")
+
+    km_run_div.style.pointerEvents = 'auto'
+    km_run_input.addEventListener('click', function(){
+        km_run_input.value = ""
+    }, false)
+
+    if(answer){
+        edit_info_btn.style.display = 'none'
+        finalize_cancel_div.style.display = 'block'
+    }
+},false)
 
 function indexTransitionShow(){
     main_header.style.top = '-60%'

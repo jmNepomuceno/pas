@@ -321,6 +321,117 @@ body #garage-main #left-section-main #km-run-div input:focus{
     outline: none;
 }
 
+body #garage-main #left-section-main #spare-parts-div{
+    position: absolute;
+    top:20%;
+    left:10%;
+    width:80%;
+    height:60%;
+    color: white;
+    border:1px solid white;
+    opacity: 0.3;
+    /* pointer-events: none; */
+}
+
+body #garage-main #left-section-main #spare-parts-div #spare-parts-lbl{
+    position: absolute;
+    top:5%;
+    left:25%;
+    font-size: 1.5vw;
+}
+
+body #garage-main #left-section-main #spare-parts-div #battery-lbl{
+    position: absolute;
+    top:15%;
+    left:30%;
+    font-size: 1.2vw;
+}
+
+body #garage-main #left-section-main #spare-parts-div #battery-img{
+    position: absolute;
+    top:13%;
+    left:58%;
+    width:10%;
+    height:8%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #battery-replace-btn{
+    position: absolute;
+    top:22%;
+    left:15%;
+    width:30%;
+    height:6%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #battery-good-btn{
+    position: absolute;
+    top:22%;
+    right:15%;
+    width:30%;
+    height:6%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #battery-replace-btn,
+body #garage-main #left-section-main #spare-parts-div #battery-good-btn{
+    border-radius:5px;
+    color:#2A2b2dff;
+    cursor: pointer;
+    font-size: 1vw;
+    background-color:white;
+    border:none;
+}
+
+body #garage-main #left-section-main #spare-parts-div #battery-replace-btn:focus,
+body #garage-main #left-section-main #spare-parts-div #battery-good-btn:focus{
+    outline: none;
+}
+
+body #garage-main #left-section-main #spare-parts-div #brakes-lbl{
+    position: absolute;
+    top:33%;
+    left:32%;
+    font-size: 1.2vw;
+}
+
+body #garage-main #left-section-main #spare-parts-div #brake-img{
+    position: absolute;
+    top:33%;
+    left:56%;
+    width:10%;
+    height:5%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #brake-replace-btn{
+    position: absolute;
+    top:40%;
+    left:15%;
+    width:30%;
+    height:6%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #brake-good-btn{
+    position: absolute;
+    top:40%;
+    right:15%;
+    width:30%;
+    height:6%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #brake-replace-btn,
+body #garage-main #left-section-main #spare-parts-div #brake-good-btn{
+    border-radius:5px;
+    color:#2A2b2dff;
+    cursor: pointer;
+    font-size: 1vw;
+    background-color:white;
+    border:none;
+}
+
+body #garage-main #left-section-main #spare-parts-div #brake-replace-btn:focus,
+body #garage-main #left-section-main #spare-parts-div #brake-good-btn:focus{
+    outline: none;
+}
+
 body #garage-main #left-section-main #finalize-cancel-div{
     position:absolute;
     bottom:3%;
