@@ -23,11 +23,16 @@ const occupy_done_btn = document.querySelector('body #garage-main #left-section-
 const occupy_cancel_btn = document.querySelector('body #garage-main #left-section-main #finalize-cancel-div #cancel-btn')
 const edit_info_btn = document.querySelector('body #garage-main #left-section-main #edit-info-btn')
 
+const spare_parts_div = document.querySelector('body #garage-main #left-section-main #spare-parts-div')
+
 const battery_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #battery-replace-btn')
 const battery_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #battery-good-btn')
 
 const brake_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #brake-replace-btn')
 const brake_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #brake-good-btn')
+
+const light_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #light-replace-btn')
+const light_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #light-good-btn')
 
 
 const middle_section_main = document.getElementById('middle-section-main')
@@ -55,7 +60,10 @@ function addGarageSpace(){
             // the child keys will be , Availability and kilometer run
             garage_capacity[garage_block] = {
                 Availability :'FREE',
-                'Kilometer Run' :'0.0'
+                'Kilometer Run' :'0.0',
+                Battery : false,
+                Brakes : false,
+                CarLights : false
             }
 
             row.textContent = garage_block
@@ -102,6 +110,24 @@ function garageHover(block){
         km_run_input.value = ''
     }
     
+    if(garage_capacity[previous_click_block.textContent]['Battery'] ||
+        garage_capacity[previous_click_block.textContent]['Brakes'] ||
+        garage_capacity[previous_click_block.textContent]['CarLights']){
+            
+            if(garage_capacity[previous_click_block.textContent]['Battery']){
+                battery_replace_btn.style.backgroundColor = '#d9514eff'
+                battery_good_btn.style.backgroundColor = 'white'
+            }
+            if(garage_capacity[previous_click_block.textContent]['Brakes']){
+                brake_replace_btn.style.backgroundColor = '#d9514eff'
+                brake_good_btn.style.backgroundColor = 'white'
+            }
+            if(garage_capacity[previous_click_block.textContent]['CarLights']){
+                light_replace_btn.style.backgroundColor = '#d9514eff'
+                light_good_btn.style.backgroundColor = 'white'
+            }
+    }
+    
     console.log(previous_click_block.textContent)
 }
 
@@ -125,6 +151,16 @@ brake_good_btn.addEventListener('click', function(){
     brake_replace_btn.style.backgroundColor = 'white'
 }, false)
 
+light_replace_btn.addEventListener('click', function(){
+    light_replace_btn.style.backgroundColor = '#d9514eff'
+    light_good_btn.style.backgroundColor = 'white'
+}, false)
+
+light_good_btn.addEventListener('click', function(){
+    light_good_btn.style.backgroundColor = '#2da8d8ff'
+    light_replace_btn.style.backgroundColor = 'white'
+}, false)
+
 occupy_space.addEventListener('click', function(){
    previous_click_block.style.background = 'url(./imgs/car_b.png)'
    previous_click_block.style.backgroundRepeat = 'no-repeat'
@@ -138,6 +174,7 @@ occupy_space.addEventListener('click', function(){
     }
 
    km_run_div.style.pointerEvents = 'auto'
+   spare_parts_div.style.pointerEvents = 'auto'
 
    occupy_space.style.display = 'none'
    finalize_cancel_div.style.display = 'block'
@@ -154,12 +191,24 @@ occupy_done_btn.addEventListener('click', function(){
         return
     }
 
+    //get the selected button on all of the spare Parts
+    if(battery_good_btn.style.backgroundColor == 'white'){
+        garage_capacity[previous_click_block.textContent]['Battery'] = true 
+    }
+    if(brake_good_btn.style.backgroundColor == 'white'){
+        garage_capacity[previous_click_block.textContent]['Brakes'] = true 
+    }
+    if(light_good_btn.style.backgroundColor == 'white'){
+        garage_capacity[previous_click_block.textContent]['CarLights'] = true 
+    }
+
     garage_capacity[previous_click_block.textContent]['Availability'] = 'OCCUPIED'
     garage_capacity[previous_click_block.textContent]['Kilometer Run'] = km_run_input_int_val
     garage_capacity[previous_click_block.textContent]['Edit Info Enable'] = true
 
     //km_run_input.value = km_run_input.value + " km"
     km_run_div.style.pointerEvents = 'none'
+    spare_parts_div.style.pointerEvents = 'none'
 
     finalize_cancel_div.style.display = 'none'
     edit_info_btn.style.display = 'block'
@@ -182,6 +231,17 @@ occupy_cancel_btn.addEventListener('click', function(){
     km_run_div.style.pointerEvents = 'none'
     km_run_input.value = ""
 
+    spare_parts_div.style.pointerEvents = 'none'
+
+    battery_replace_btn.style.backgroundColor = 'white'
+    battery_replace_btn.style.backgroundColor = 'white'
+
+    brake_replace_btn.style.backgroundColor = 'white'
+    brake_replace_btn.style.backgroundColor = 'white'
+
+    light_replace_btn.style.backgroundColor = 'white'
+    light_replace_btn.style.backgroundColor = 'white'
+
     occupy_space.style.display = 'block'
     finalize_cancel_div.style.display = 'none'
 
@@ -199,6 +259,8 @@ edit_info_btn.addEventListener('click', function(){
     km_run_input.addEventListener('click', function(){
         km_run_input.value = ""
     }, false)
+
+    spare_parts_div.style.pointerEvents = 'auto'
 
     if(answer){
         edit_info_btn.style.display = 'none'

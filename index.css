@@ -328,9 +328,9 @@ body #garage-main #left-section-main #spare-parts-div{
     width:80%;
     height:60%;
     color: white;
-    border:1px solid white;
+    /* border:1px solid white; */
     opacity: 0.3;
-    /* pointer-events: none; */
+    pointer-events: none;
 }
 
 body #garage-main #left-section-main #spare-parts-div #spare-parts-lbl{
@@ -429,6 +429,54 @@ body #garage-main #left-section-main #spare-parts-div #brake-good-btn{
 
 body #garage-main #left-section-main #spare-parts-div #brake-replace-btn:focus,
 body #garage-main #left-section-main #spare-parts-div #brake-good-btn:focus{
+    outline: none;
+}
+
+/*  */
+
+body #garage-main #left-section-main #spare-parts-div #light-lbl{
+    position: absolute;
+    top:50%;
+    left:20%;
+    font-size: 1.2vw;
+}
+
+body #garage-main #left-section-main #spare-parts-div #light-img{
+    position: absolute;
+    top:50%;
+    left:60%;
+    width:10%;
+    height:5%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #light-replace-btn{
+    position: absolute;
+    top:56%;
+    left:15%;
+    width:30%;
+    height:6%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #light-good-btn{
+    position: absolute;
+    top:56%;
+    right:15%;
+    width:30%;
+    height:6%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #light-replace-btn,
+body #garage-main #left-section-main #spare-parts-div #light-good-btn{
+    border-radius:5px;
+    color:#2A2b2dff;
+    cursor: pointer;
+    font-size: 1vw;
+    background-color:white;
+    border:none;
+}
+
+body #garage-main #left-section-main #spare-parts-div #light-replace-btn:focus,
+body #garage-main #left-section-main #spare-parts-div #light-good-btn:focus{
     outline: none;
 }
 
