@@ -34,6 +34,8 @@ const brake_good_btn = document.querySelector('body #garage-main #left-section-m
 const light_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #light-replace-btn')
 const light_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #light-good-btn')
 
+const windshield_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #windshield-replace-btn')
+const windshield_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #windshield-good-btn')
 
 const middle_section_main = document.getElementById('middle-section-main')
 const garage_spaces_divs = document.querySelectorAll('body #garage-main #right-section-main .garage-spaces')
@@ -61,9 +63,10 @@ function addGarageSpace(){
             garage_capacity[garage_block] = {
                 Availability :'FREE',
                 'Kilometer Run' :'0.0',
-                Battery : false,
-                Brakes : false,
-                CarLights : false
+                Battery : null,
+                Brakes : null,
+                CarLights : null,
+                WindShields : null
             }
 
             row.textContent = garage_block
@@ -110,22 +113,49 @@ function garageHover(block){
         km_run_input.value = ''
     }
     
-    if(garage_capacity[previous_click_block.textContent]['Battery'] ||
-        garage_capacity[previous_click_block.textContent]['Brakes'] ||
-        garage_capacity[previous_click_block.textContent]['CarLights']){
-            
-            if(garage_capacity[previous_click_block.textContent]['Battery']){
-                battery_replace_btn.style.backgroundColor = '#d9514eff'
-                battery_good_btn.style.backgroundColor = 'white'
-            }
-            if(garage_capacity[previous_click_block.textContent]['Brakes']){
-                brake_replace_btn.style.backgroundColor = '#d9514eff'
-                brake_good_btn.style.backgroundColor = 'white'
-            }
-            if(garage_capacity[previous_click_block.textContent]['CarLights']){
-                light_replace_btn.style.backgroundColor = '#d9514eff'
-                light_good_btn.style.backgroundColor = 'white'
-            }
+    if(garage_capacity[previous_click_block.textContent]['Battery'] === true){
+        battery_replace_btn.style.backgroundColor = '#d9514eff'
+        battery_good_btn.style.backgroundColor = 'white'
+    }else if(garage_capacity[previous_click_block.textContent]['Battery'] === false){
+        battery_replace_btn.style.backgroundColor = 'white'
+        battery_good_btn.style.backgroundColor = '#2da8d8ff'
+    }
+
+    if(garage_capacity[previous_click_block.textContent]['Brakes'] === true){
+        brake_replace_btn.style.backgroundColor = '#d9514eff'
+        brake_good_btn.style.backgroundColor = 'white'
+    }else if(garage_capacity[previous_click_block.textContent]['Brakes'] === false){
+        brake_replace_btn.style.backgroundColor = 'white'
+        brake_good_btn.style.backgroundColor = '#2da8d8ff'
+    }
+
+    if(garage_capacity[previous_click_block.textContent]['CarLights'] === true){
+        light_replace_btn.style.backgroundColor = '#d9514eff'
+        light_good_btn.style.backgroundColor = 'white'
+    }else if(garage_capacity[previous_click_block.textContent]['CarLights'] === false){
+        light_replace_btn.style.backgroundColor = 'white'
+        light_good_btn.style.backgroundColor = '#2da8d8ff'
+    }
+
+    if(garage_capacity[previous_click_block.textContent]['WindShields'] === true){
+        windshield_replace_btn.style.backgroundColor = '#d9514eff'
+        windshield_good_btn.style.backgroundColor = 'white'
+    }else if(garage_capacity[previous_click_block.textContent]['WindShields'] === false){
+        windshield_replace_btn.style.backgroundColor = 'white'
+        windshield_good_btn.style.backgroundColor = '#2da8d8ff'
+    }
+    else{
+        battery_replace_btn.style.backgroundColor = 'white'
+        battery_good_btn.style.backgroundColor = 'white'
+
+        brake_replace_btn.style.backgroundColor = 'white'
+        brake_good_btn.style.backgroundColor = 'white'
+
+        light_replace_btn.style.backgroundColor = 'white'
+        light_good_btn.style.backgroundColor = 'white'
+
+        windshield_replace_btn.style.backgroundColor = 'white'
+        windshield_good_btn.style.backgroundColor = 'white'
     }
     
     console.log(previous_click_block.textContent)
@@ -161,6 +191,16 @@ light_good_btn.addEventListener('click', function(){
     light_replace_btn.style.backgroundColor = 'white'
 }, false)
 
+windshield_replace_btn.addEventListener('click', function(){
+    windshield_replace_btn.style.backgroundColor = '#d9514eff'
+    windshield_good_btn.style.backgroundColor = 'white'
+}, false)
+
+windshield_good_btn.addEventListener('click', function(){
+    windshield_good_btn.style.backgroundColor = '#2da8d8ff'
+    windshield_replace_btn.style.backgroundColor = 'white'
+}, false)
+
 occupy_space.addEventListener('click', function(){
    previous_click_block.style.background = 'url(./imgs/car_b.png)'
    previous_click_block.style.backgroundRepeat = 'no-repeat'
@@ -194,12 +234,27 @@ occupy_done_btn.addEventListener('click', function(){
     //get the selected button on all of the spare Parts
     if(battery_good_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['Battery'] = true 
+    }else if(battery_replace_btn.style.backgroundColor == 'white'){
+        garage_capacity[previous_click_block.textContent]['Battery'] = false 
     }
+
     if(brake_good_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['Brakes'] = true 
+    }else if(brake_replace_btn.style.backgroundColor == 'white'){
+        garage_capacity[previous_click_block.textContent]['Brakes'] = false 
     }
+
+    
     if(light_good_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['CarLights'] = true 
+    }else if(light_replace_btn.style.backgroundColor == 'white'){
+        garage_capacity[previous_click_block.textContent]['CarLights'] = false 
+    }
+
+    if(windshield_good_btn.style.backgroundColor == 'white'){
+        garage_capacity[previous_click_block.textContent]['WindShields'] = true 
+    }else if(windshield_replace_btn.style.backgroundColor == 'white'){
+        garage_capacity[previous_click_block.textContent]['WindShields'] = false 
     }
 
     garage_capacity[previous_click_block.textContent]['Availability'] = 'OCCUPIED'

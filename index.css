@@ -432,8 +432,6 @@ body #garage-main #left-section-main #spare-parts-div #brake-good-btn:focus{
     outline: none;
 }
 
-/*  */
-
 body #garage-main #left-section-main #spare-parts-div #light-lbl{
     position: absolute;
     top:50%;
@@ -477,6 +475,53 @@ body #garage-main #left-section-main #spare-parts-div #light-good-btn{
 
 body #garage-main #left-section-main #spare-parts-div #light-replace-btn:focus,
 body #garage-main #left-section-main #spare-parts-div #light-good-btn:focus{
+    outline: none;
+}
+
+/*  */
+body #garage-main #left-section-main #spare-parts-div #windshield-lbl{
+    position: absolute;
+    top:68%;
+    left:20%;
+    font-size: 1.2vw;
+}
+
+body #garage-main #left-section-main #spare-parts-div #windshield-img{
+    position: absolute;
+    top:68%;
+    left:64%;
+    width:10%;
+    height:5%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #windshield-replace-btn{
+    position: absolute;
+    top:74%;
+    left:15%;
+    width:30%;
+    height:6%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #windshield-good-btn{
+    position: absolute;
+    top:74%;
+    right:15%;
+    width:30%;
+    height:6%;
+}
+
+body #garage-main #left-section-main #spare-parts-div #windshield-replace-btn,
+body #garage-main #left-section-main #spare-parts-div #windshield-good-btn{
+    border-radius:5px;
+    color:#2A2b2dff;
+    cursor: pointer;
+    font-size: 1vw;
+    background-color:white;
+    border:none;
+}
+
+body #garage-main #left-section-main #spare-parts-div #windshield-replace-btn:focus,
+body #garage-main #left-section-main #spare-parts-div #windshield-good-btn:focus{
     outline: none;
 }
 
