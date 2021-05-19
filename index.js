@@ -343,6 +343,15 @@ function closeGarage(){
     left_section_main.style.opacity = '0'
     left_section_main.style.left = "-25%"
 
+    occupy_space.style.opacity = '0'
+    occupy_space.style.left = "-25%"
+
+    finalize_cancel_div.style.opacity = '0'
+    finalize_cancel_div.style.left = "-25%"
+
+    edit_info_btn.style.opacity = '0'
+    edit_info_btn.style.left = "-25%"
+
     middle_section_main.style.opacity = '0'
     middle_section_main.style.left = "-45%"
 
@@ -358,6 +367,15 @@ garage_h2.addEventListener('click', function(){
 
     left_section_main.style.opacity = '1'
     left_section_main.style.left = "0"
+
+    occupy_space.style.opacity = '1'
+    occupy_space.style.left = "0"
+
+    finalize_cancel_div.style.opacity = '1'
+    finalize_cancel_div.style.left = "0"
+
+    edit_info_btn.style.opacity = '1'
+    edit_info_btn.style.left = "0"
 
     middle_section_main.style.opacity = '1'
     middle_section_main.style.left = "25%"
