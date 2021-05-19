@@ -37,6 +37,13 @@ const light_good_btn = document.querySelector('body #garage-main #left-section-m
 const windshield_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #windshield-replace-btn')
 const windshield_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #windshield-good-btn')
 
+const logic_info_div = document.querySelector('body #garage-main #left-section-main #logic-info-div')
+
+const car_model_input = document.querySelector('body #garage-main #left-section-main #logic-info-div #car-model-input')
+const car_type_input = document.querySelector('body #garage-main #left-section-main #logic-info-div #car-type-input')
+const owner_name_input = document.querySelector('body #garage-main #left-section-main #logic-info-div #owner-name-input')
+const owner_address_input = document.querySelector('body #garage-main #left-section-main #logic-info-div #owner-address-input')
+
 const middle_section_main = document.getElementById('middle-section-main')
 const garage_spaces_divs = document.querySelectorAll('body #garage-main #right-section-main .garage-spaces')
 
@@ -62,11 +69,15 @@ function addGarageSpace(){
             // the child keys will be , Availability and kilometer run
             garage_capacity[garage_block] = {
                 Availability :'FREE',
+                CarModel : null,
+                CarType : null,
+                OwnerName : null,
+                OwnerAddress : null,
                 'Kilometer Run' :'0.0',
                 Battery : null,
                 Brakes : null,
                 CarLights : null,
-                WindShields : null
+                WindShields : null,
             }
 
             row.textContent = garage_block
@@ -157,6 +168,30 @@ function garageHover(block){
         windshield_replace_btn.style.backgroundColor = 'white'
         windshield_good_btn.style.backgroundColor = 'white'
     }
+
+    if(garage_capacity[previous_click_block.textContent]['CarModel'] !== null){
+        car_model_input.value = garage_capacity[previous_click_block.textContent]['CarModel']
+    }else{
+        car_model_input.value = ""
+    }
+
+    if(garage_capacity[previous_click_block.textContent]['CarType'] !== null){
+        car_type_input.value = garage_capacity[previous_click_block.textContent]['CarType']
+    }else{
+        car_type_input.value = ""
+    }
+
+    if(garage_capacity[previous_click_block.textContent]['OwnerName'] !== null){
+        owner_name_input.value = garage_capacity[previous_click_block.textContent]['OwnerName']
+    }else{
+        owner_name_input.value = ""
+    }
+
+    if(garage_capacity[previous_click_block.textContent]['OwnerAddress'] !== null){
+        owner_address_input.value = garage_capacity[previous_click_block.textContent]['OwnerAddress']
+    }else{
+        owner_address_input.value = ""
+    }
     
     console.log(previous_click_block.textContent)
 }
@@ -213,11 +248,13 @@ occupy_space.addEventListener('click', function(){
         }
     }
 
-   km_run_div.style.pointerEvents = 'auto'
-   spare_parts_div.style.pointerEvents = 'auto'
+    logic_info_div.style.pointerEvents = 'auto'
+    km_run_div.style.pointerEvents = 'auto'
+    spare_parts_div.style.pointerEvents = 'auto'
+   
 
-   occupy_space.style.display = 'none'
-   finalize_cancel_div.style.display = 'block'
+    occupy_space.style.display = 'none'
+    finalize_cancel_div.style.display = 'block'
 }, false)
 
 occupy_done_btn.addEventListener('click', function(){
@@ -257,6 +294,10 @@ occupy_done_btn.addEventListener('click', function(){
         garage_capacity[previous_click_block.textContent]['WindShields'] = false 
     }
 
+    garage_capacity[previous_click_block.textContent]['CarModel'] = car_model_input.value
+    garage_capacity[previous_click_block.textContent]['CarType'] = car_type_input.value
+    garage_capacity[previous_click_block.textContent]['OwnerName'] = owner_name_input.value
+    garage_capacity[previous_click_block.textContent]['OwnerAddress'] = owner_address_input.value
     garage_capacity[previous_click_block.textContent]['Availability'] = 'OCCUPIED'
     garage_capacity[previous_click_block.textContent]['Kilometer Run'] = km_run_input_int_val
     garage_capacity[previous_click_block.textContent]['Edit Info Enable'] = true
@@ -264,6 +305,7 @@ occupy_done_btn.addEventListener('click', function(){
     //km_run_input.value = km_run_input.value + " km"
     km_run_div.style.pointerEvents = 'none'
     spare_parts_div.style.pointerEvents = 'none'
+    logic_info_div.style.pointerEvents = 'none'
 
     finalize_cancel_div.style.display = 'none'
     edit_info_btn.style.display = 'block'
@@ -287,6 +329,7 @@ occupy_cancel_btn.addEventListener('click', function(){
     km_run_input.value = ""
 
     spare_parts_div.style.pointerEvents = 'none'
+    logic_info_div.style.pointerEvents = 'none'
 
     battery_replace_btn.style.backgroundColor = 'white'
     battery_replace_btn.style.backgroundColor = 'white'
@@ -315,7 +358,24 @@ edit_info_btn.addEventListener('click', function(){
         km_run_input.value = ""
     }, false)
 
+    car_model_input.addEventListener('click', function(){
+        car_model_input.value = ""
+    }, false)
+
+    car_type_input.addEventListener('click', function(){
+        car_type_input.value = ""
+    }, false)
+
+    owner_name_input.addEventListener('click', function(){
+        owner_name_input.value = ""
+    }, false)
+
+    owner_address_input.addEventListener('click', function(){
+        owner_address_input.value = ""
+    }, false)
+
     spare_parts_div.style.pointerEvents = 'auto'
+    logic_info_div.style.pointerEvents = 'auto'
 
     if(answer){
         edit_info_btn.style.display = 'none'
