@@ -189,9 +189,8 @@ body #garage-main #middle-section-main #border-lining-f{
 
 body #garage-main #left-section-main #occupy-space-btn{
     position: absolute;
-    bottom:8%;
+    bottom:0;
     left:17%;
-    display: inline-block;
     padding: 10px 30px;
     color: rgba(255, 255, 255, 0.4);
     background: #262c37;
@@ -199,7 +198,8 @@ body #garage-main #left-section-main #occupy-space-btn{
     font-size: 1vw;
     transition: 0.5s;
     text-decoration: none;
-    display: none;
+    /* z-index: 3; */
+    /* display: none; */
 }
 
 body #garage-main #left-section-main #occupy-space-btn:hover{
@@ -297,9 +297,9 @@ body #garage-main #left-section-main #logic-info-div{
     top:12%;
     left:10%;
     width:80%;
-    height:40%;
+    height:45%;
     color: white;
-    border:1px solid white;
+    /* border-bottom:1px solid white; */
     opacity: 0.3;
     pointer-events: none;
 }
@@ -313,36 +313,151 @@ body #garage-main #left-section-main #logic-info-div #logic-info-lbl{
 
 body #garage-main #left-section-main #logic-info-div #car-model{
     position: absolute;
-    top:15%;
-    left:30%;
+    top:13%;
+    left:22%;
     font-size: 1.2vw;
+}
+
+body #garage-main #left-section-main #logic-info-div #car-model-img{
+    position: absolute;
+    top:6%;
+    left:60%;
+    width:13%;
+    height:20%;
+}
+
+body #garage-main #left-section-main #logic-info-div #car-model-input{
+    position: absolute;
+    top:22%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #garage-main #left-section-main #logic-info-div #car-type{
+    position: absolute;
+    top:36%;
+    left:23%;
+    font-size: 1.2vw;
+}
+
+body #garage-main #left-section-main #logic-info-div #car-type-img{
+    position: absolute;
+    top:29%;
+    left:58%;
+    width:13%;
+    height:20%;
+}
+
+body #garage-main #left-section-main #logic-info-div #car-type-input{
+    position: absolute;
+    top:45%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+/*  */
+body #garage-main #left-section-main #logic-info-div #owner-name{
+    position: absolute;
+    top:59%;
+    left:15%;
+    font-size: 1.2vw;
+}
+
+body #garage-main #left-section-main #logic-info-div #owner-name-img{
+    position: absolute;
+    top:58%;
+    left:65%;
+    width:13%;
+    height:10%;
+}
+
+body #garage-main #left-section-main #logic-info-div #owner-name-input{
+    position: absolute;
+    top:69%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+/*  */
+body #garage-main #left-section-main #logic-info-div #owner-address{
+    position: absolute;
+    top:82%;
+    left:15%;
+    font-size: 1.2vw;
+}
+
+body #garage-main #left-section-main #logic-info-div #owner-address-img{
+    position: absolute;
+    top:80%;
+    left:75%;
+    width:13%;
+    height:8%;
+}
+
+body #garage-main #left-section-main #logic-info-div #owner-address-input{
+    position: absolute;
+    top:90%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
 }
 
 body #garage-main #left-section-main #km-run-div{
     position: absolute;
-    top:55%;
+    top:60%;
     left:10%;
     width:80%;
-    height:10%;
+    height:15%;
     color: white;
-    border:1px solid white;
+    border-top:5px solid #186381;
     opacity: 0.3;
     pointer-events: none;
 }
 
 body #garage-main #left-section-main #km-run-div label{
     position: absolute;
-    top:7%;
+    top:15%;
     left:10%;
     font-size: 1.5vw;
 }
 
 body #garage-main #left-section-main #km-run-div img{
     position: absolute;
-    top:5%;
+    top:15%;
     left:73%;
     width:20%;
-    height:38%;
+    height:25%;
 }
 
 body #garage-main #left-section-main #km-run-div input{
@@ -350,7 +465,7 @@ body #garage-main #left-section-main #km-run-div input{
     top:50%;
     left:15%;
     width:65%;
-    height:45%;
+    height:35%;
     border-radius: 20px;
     text-decoration: none;
     border: 1px solid white;
@@ -366,12 +481,12 @@ body #garage-main #left-section-main #km-run-div input:focus{
 
 body #garage-main #left-section-main #spare-parts-div{
     position: absolute;
-    top:65%;
+    top:76%;
     left:10%;
     width:80%;
     height:60%;
     color: white;
-    border:1px solid white;
+    border-top:5px solid #186381;
     opacity: 0.3;
     pointer-events: none;
 }
