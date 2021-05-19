@@ -112,6 +112,11 @@ body #garage-main #left-section-main{
     background: #2A2B2DFF;
     opacity: 0;
     transition: 1s;
+    overflow: auto;
+}
+
+body #garage-main #left-section-main::-webkit-scrollbar {
+    display: none;
 }
 
 body #garage-main #left-section-main #bars-div{
@@ -128,7 +133,7 @@ body #garage-main #left-section-main #border-lining{
     top:0;
     left:0;
     width:100%;
-    height:100%;
+    height:200%;
     border:10px solid #2DA8D8FF;
 }
 
@@ -142,7 +147,7 @@ body #garage-main #middle-section-main{
     transition: 1s;
 }
 
- body #garage-main #middle-section-main #border-lining-b{
+body #garage-main #middle-section-main #border-lining-b{
     position: absolute;
     left:0;
     width:20%;
@@ -275,14 +280,52 @@ body #garage-main #left-section-main #occupy-space-btn:hover span:nth-child(4){
     transition-delay: 0.5s;
 }
 
+body #garage-main #left-section-main #card-vehicle{
+    position: absolute;
+    top:5%;
+    left:18%;
+    width:65%;
+    height:5%;
+    border-bottom:1px solid white;
+    text-align: center;
+    color:#fff;
+    line-height: 2em;
+}
+
+body #garage-main #left-section-main #logic-info-div{
+    position: absolute;
+    top:12%;
+    left:10%;
+    width:80%;
+    height:40%;
+    color: white;
+    border:1px solid white;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #garage-main #left-section-main #logic-info-div #logic-info-lbl{
+    position: absolute;
+    top:2%;
+    left:10%;
+    font-size: 1.5vw;
+}
+
+body #garage-main #left-section-main #logic-info-div #car-model{
+    position: absolute;
+    top:15%;
+    left:30%;
+    font-size: 1.2vw;
+}
+
 body #garage-main #left-section-main #km-run-div{
     position: absolute;
-    top:10%;
+    top:55%;
     left:10%;
     width:80%;
     height:10%;
     color: white;
-    /* border:1px solid white; */
+    border:1px solid white;
     opacity: 0.3;
     pointer-events: none;
 }
@@ -290,14 +333,14 @@ body #garage-main #left-section-main #km-run-div{
 body #garage-main #left-section-main #km-run-div label{
     position: absolute;
     top:7%;
-    left:5%;
+    left:10%;
     font-size: 1.5vw;
 }
 
 body #garage-main #left-section-main #km-run-div img{
     position: absolute;
     top:5%;
-    left:68%;
+    left:73%;
     width:20%;
     height:38%;
 }
@@ -323,12 +366,12 @@ body #garage-main #left-section-main #km-run-div input:focus{
 
 body #garage-main #left-section-main #spare-parts-div{
     position: absolute;
-    top:20%;
+    top:65%;
     left:10%;
     width:80%;
     height:60%;
     color: white;
-    /* border:1px solid white; */
+    border:1px solid white;
     opacity: 0.3;
     pointer-events: none;
 }
@@ -523,6 +566,18 @@ body #garage-main #left-section-main #spare-parts-div #windshield-good-btn{
 body #garage-main #left-section-main #spare-parts-div #windshield-replace-btn:focus,
 body #garage-main #left-section-main #spare-parts-div #windshield-good-btn:focus{
     outline: none;
+}
+
+body #garage-main #left-section-main #car-acts-div{
+    position: absolute;
+    top:75%;
+    left:10%;
+    width:80%;
+    height:20%;
+    color: white;
+    border:1px solid white;
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 body #garage-main #left-section-main #finalize-cancel-div{
