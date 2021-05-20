@@ -15,34 +15,43 @@ const unknown_h2 = document.getElementById('unknown-h2')
 const garage_main = document.querySelector('body #garage-main')
 
 const left_section_main = document.getElementById('left-section-main')
+
+const card_vehicle_section = document.querySelector('body #garage-main #left-section-main #card-vehicle-section')
+const service_card_section = document.querySelector('body #garage-main #left-section-main #service-card-section')
+
+const bars_div = document.querySelector('body #garage-main #left-section-main #bars-div')
+const bars_body_div = document.querySelector('body #garage-main #left-section-main #bars-body-div')
+const card_vehicle_nav = document.querySelector('body #garage-main #left-section-main #bars-body-div label:nth-child(1)')
+const service_order_card_nav = document.querySelector('body #garage-main #left-section-main #bars-body-div label:nth-child(2)')
+
 const occupy_space = document.getElementById('occupy-space-btn')
-const km_run_div = document.querySelector('body #garage-main #left-section-main #km-run-div')
-const km_run_input = document.querySelector('body #garage-main #left-section-main #km-run-div input')
-const finalize_cancel_div = document.querySelector('body #garage-main #left-section-main #finalize-cancel-div')
-const occupy_done_btn = document.querySelector('body #garage-main #left-section-main #finalize-cancel-div #done-btn')
-const occupy_cancel_btn = document.querySelector('body #garage-main #left-section-main #finalize-cancel-div #cancel-btn')
-const edit_info_btn = document.querySelector('body #garage-main #left-section-main #edit-info-btn')
+const km_run_div = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #km-run-div')
+const km_run_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #km-run-div input')
+const finalize_cancel_div = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div')
+const occupy_done_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div #done-btn')
+const occupy_cancel_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div #cancel-btn')
+const edit_info_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #edit-info-btn')
 
-const spare_parts_div = document.querySelector('body #garage-main #left-section-main #spare-parts-div')
+const spare_parts_div = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #spare-parts-div')
 
-const battery_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #battery-replace-btn')
-const battery_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #battery-good-btn')
+const battery_replace_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #battery-replace-btn')
+const battery_good_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #battery-good-btn')
 
-const brake_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #brake-replace-btn')
-const brake_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #brake-good-btn')
+const brake_replace_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #brake-replace-btn')
+const brake_good_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #brake-good-btn')
 
-const light_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #light-replace-btn')
-const light_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #light-good-btn')
+const light_replace_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #light-replace-btn')
+const light_good_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #light-good-btn')
 
-const windshield_replace_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #windshield-replace-btn')
-const windshield_good_btn = document.querySelector('body #garage-main #left-section-main #spare-parts-div #windshield-good-btn')
+const windshield_replace_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-replace-btn')
+const windshield_good_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-good-btn')
 
-const logic_info_div = document.querySelector('body #garage-main #left-section-main #logic-info-div')
+const logic_info_div = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div')
 
-const car_model_input = document.querySelector('body #garage-main #left-section-main #logic-info-div #car-model-input')
-const car_type_input = document.querySelector('body #garage-main #left-section-main #logic-info-div #car-type-input')
-const owner_name_input = document.querySelector('body #garage-main #left-section-main #logic-info-div #owner-name-input')
-const owner_address_input = document.querySelector('body #garage-main #left-section-main #logic-info-div #owner-address-input')
+const car_model_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-model-input')
+const car_type_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-type-input')
+const owner_name_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-name-input')
+const owner_address_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-address-input')
 
 const middle_section_main = document.getElementById('middle-section-main')
 const garage_spaces_divs = document.querySelectorAll('body #garage-main #right-section-main .garage-spaces')
@@ -53,6 +62,28 @@ const right_section_main = document.getElementById('right-section-main')
 let garage_capacity = {}
 
 let previous_click_block = ""
+
+bars_div.addEventListener('click', function(){
+    if(bars_body_div.style.display == 'block'){
+        bars_body_div.style.display = 'none'
+    }else{
+        bars_body_div.style.display = 'block'
+    }
+    
+}, false)
+
+service_order_card_nav.addEventListener('click', function(){
+    service_card_section.style.display = 'block'
+    card_vehicle_section.style.display = 'none'
+
+    bars_body_div.style.display = 'none'
+}, false)
+
+card_vehicle_nav.addEventListener('click', function(){
+    card_vehicle_section.style.display = 'block'
+    service_card_section.style.display = 'none'
+    bars_body_div.style.display = 'none'
+}, false)
 
 function addGarageSpace(){
     for(let i = 1; i <= 10; i++){
