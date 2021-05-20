@@ -56,9 +56,9 @@ const owner_address_input = document.querySelector('body #garage-main #left-sect
 //service card section
 const service_time_input = document.querySelector('body #garage-main #left-section-main #service-card-section #service-time-div #service-time-input')
 const date_leave_input = document.querySelector('body #garage-main #left-section-main #service-card-section #date-leave-div #date-leave-input')
-const schedule_acts_1_input = document.querySelector('body #garage-main #left-section-main #service-card-section #date-leave-div #scheduled-acts-input-1')
-const schedule_acts_2_input = document.querySelector('body #garage-main #left-section-main #service-card-section #date-leave-div #scheduled-acts-input-2')
-const schedule_acts_3_input = document.querySelector('body #garage-main #left-section-main #service-card-section #date-leave-div #scheduled-acts-input-3')
+const schedule_acts_1_input = document.querySelector('body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-1')
+const schedule_acts_2_input = document.querySelector('body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-2')
+const schedule_acts_3_input = document.querySelector('body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-3')
 
 
 const middle_section_main = document.getElementById('middle-section-main')
@@ -236,6 +236,37 @@ function garageHover(block){
     }else{
         owner_address_input.value = ""
     }
+
+    if(garage_capacity[previous_click_block.textContent]['TimeForService'] !== null){
+        service_time_input.value = garage_capacity[previous_click_block.textContent]['TimeForService']
+    }else{
+        service_time_input.value = ""
+    }
+
+    if(garage_capacity[previous_click_block.textContent]['DateForLeaving'] !== null){
+        date_leave_input.value = garage_capacity[previous_click_block.textContent]['DateForLeaving']
+    }else{
+        date_leave_input.value = ""
+    }
+
+    if(garage_capacity[previous_click_block.textContent]['SchedActivity1'] !== null){
+        schedule_acts_1_input.value = garage_capacity[previous_click_block.textContent]['SchedActivity1']
+    }else{
+        schedule_acts_1_input.value = ""
+    }
+
+    if(garage_capacity[previous_click_block.textContent]['SchedActivity2'] !== null){
+        schedule_acts_2_input.value = garage_capacity[previous_click_block.textContent]['SchedActivity2']
+    }else{
+        schedule_acts_2_input.value = ""
+    }
+
+    if(garage_capacity[previous_click_block.textContent]['SchedActivity3'] !== null){
+        schedule_acts_3_input.value = garage_capacity[previous_click_block.textContent]['SchedActivity3']
+    }else{
+        schedule_acts_3_input.value = ""
+    }
+    
     
     console.log(previous_click_block.textContent)
 }
@@ -347,20 +378,25 @@ occupy_done_btn.addEventListener('click', function(){
     garage_capacity[previous_click_block.textContent]['Edit Info Enable'] = true
 
     var currentDate = new Date();
-    var numberOfDaysToAdd = 6;
-    currentDate.setDate(currentDate.getDate() + numberOfDaysToAdd); 
+    var days_add = 4;
+    var futureDate = []
+
+    currentDate.setDate(currentDate.getDate() + days_add); 
 
     var dd = currentDate.getDate();
     var mm = currentDate.getMonth() + 1;
     var y = currentDate.getFullYear();
 
-    var futureDate = mm + '/'+ dd + '/'+ y;
+    for(let i = 0; i < days_add; i++){
+        futureDate.push(mm + '/'+ dd + '/'+ y)
+        dd -= 1
+    }
 
-    garage_capacity[previous_click_block.textContent]['TimeForService'] = true
-    garage_capacity[previous_click_block.textContent]['DateForLeaving'] = futureDate
-    garage_capacity[previous_click_block.textContent]['SchedActivity1'] = true
-    garage_capacity[previous_click_block.textContent]['SchedActivity2'] = true
-    garage_capacity[previous_click_block.textContent]['SchedActivity3'] = true
+    garage_capacity[previous_click_block.textContent]['TimeForService'] = "wtf is this"
+    garage_capacity[previous_click_block.textContent]['DateForLeaving'] = futureDate[0]
+    garage_capacity[previous_click_block.textContent]['SchedActivity1'] = futureDate[3]
+    garage_capacity[previous_click_block.textContent]['SchedActivity2'] = futureDate[2]
+    garage_capacity[previous_click_block.textContent]['SchedActivity3'] = futureDate[1]
 
     //km_run_input.value = km_run_input.value + " km"
     km_run_div.style.pointerEvents = 'none'
