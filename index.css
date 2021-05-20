@@ -822,6 +822,9 @@ body #garage-main #left-section-main #card-vehicle-section #edit-info-btn:hover{
 }
 
 /*******************************************SERVICE ORDER CARD SECTION****************************/
+/* body #garage-main #left-section-main #card-vehicle-section{
+    display: none;
+} */
 body #garage-main #left-section-main #service-card-section{
     display: none;
 }
@@ -837,6 +840,150 @@ body #garage-main #left-section-main #service-card-section #service-card{
     line-height: 2em;
 }
 
+body #garage-main #left-section-main #service-card-section #service-time-div{
+    position: absolute;
+    top:12%;
+    left:10%;
+    width:80%;
+    height:15%;
+    color: white;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #garage-main #left-section-main #service-card-section #service-time-div #service-time-lbl{
+    position: absolute;
+    top:10%;
+    left:12%;
+    font-size: 1.5vw;
+}
+
+body #garage-main #left-section-main #service-card-section #service-time-div #service-time-input{
+    position: absolute;
+    top: 45%;
+    left:9%;
+    width:80%;
+    height:35%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #garage-main #left-section-main #service-card-section #date-leave-div{
+    position: absolute;
+    top:30%;
+    left:10%;
+    width:80%;
+    height:15%;
+    color: white;
+    border-top:5px solid #186381;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #garage-main #left-section-main #service-card-section #date-leave-div #date-leave-lbl{
+    position: absolute;
+    top:10%;
+    left:12%;
+    font-size: 1.5vw;
+}
+
+body #garage-main #left-section-main #service-card-section #date-leave-div #date-leave-input{
+    position: absolute;
+    top: 45%;
+    left:9%;
+    width:80%;
+    height:35%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #garage-main #left-section-main #service-card-section #scheduled-acts-div{
+    position: absolute;
+    top:48%;
+    left:10%;
+    width:80%;
+    height:35%;
+    color: white;
+    border-top:5px solid #186381;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-1{
+    position: absolute;
+    top:10%;
+    left:12%;
+    font-size: 1.5vw;
+}
+
+body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-1{
+    position: absolute;
+    top: 21%;
+    left:9%;
+    width:80%;
+    height:13%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-2{
+    position: absolute;
+    top:40%;
+    left:12%;
+    font-size: 1.5vw;
+}
+
+body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-2{
+    position: absolute;
+    top: 50%;
+    left:9%;
+    width:80%;
+    height:15%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-3{
+    position: absolute;
+    top:68%;
+    left:12%;
+    font-size: 1.5vw;
+}
+
+body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-3{
+    position: absolute;
+    top: 80%;
+    left:9%;
+    width:80%;
+    height:15%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
 
 body #garage-main #right-section-main{
     position:absolute;

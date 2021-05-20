@@ -53,6 +53,14 @@ const car_type_input = document.querySelector('body #garage-main #left-section-m
 const owner_name_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-name-input')
 const owner_address_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-address-input')
 
+//service card section
+const service_time_input = document.querySelector('body #garage-main #left-section-main #service-card-section #service-time-div #service-time-input')
+const date_leave_input = document.querySelector('body #garage-main #left-section-main #service-card-section #date-leave-div #date-leave-input')
+const schedule_acts_1_input = document.querySelector('body #garage-main #left-section-main #service-card-section #date-leave-div #scheduled-acts-input-1')
+const schedule_acts_2_input = document.querySelector('body #garage-main #left-section-main #service-card-section #date-leave-div #scheduled-acts-input-2')
+const schedule_acts_3_input = document.querySelector('body #garage-main #left-section-main #service-card-section #date-leave-div #scheduled-acts-input-3')
+
+
 const middle_section_main = document.getElementById('middle-section-main')
 const garage_spaces_divs = document.querySelectorAll('body #garage-main #right-section-main .garage-spaces')
 
@@ -109,6 +117,11 @@ function addGarageSpace(){
                 Brakes : null,
                 CarLights : null,
                 WindShields : null,
+                TimeForService : null,
+                DateForLeaving : null,
+                SchedActivity1 : null,
+                SchedActivity2 : null,
+                SchedActivity3 : null
             }
 
             row.textContent = garage_block
@@ -332,6 +345,22 @@ occupy_done_btn.addEventListener('click', function(){
     garage_capacity[previous_click_block.textContent]['Availability'] = 'OCCUPIED'
     garage_capacity[previous_click_block.textContent]['Kilometer Run'] = km_run_input_int_val
     garage_capacity[previous_click_block.textContent]['Edit Info Enable'] = true
+
+    var currentDate = new Date();
+    var numberOfDaysToAdd = 6;
+    currentDate.setDate(currentDate.getDate() + numberOfDaysToAdd); 
+
+    var dd = currentDate.getDate();
+    var mm = currentDate.getMonth() + 1;
+    var y = currentDate.getFullYear();
+
+    var futureDate = mm + '/'+ dd + '/'+ y;
+
+    garage_capacity[previous_click_block.textContent]['TimeForService'] = true
+    garage_capacity[previous_click_block.textContent]['DateForLeaving'] = futureDate
+    garage_capacity[previous_click_block.textContent]['SchedActivity1'] = true
+    garage_capacity[previous_click_block.textContent]['SchedActivity2'] = true
+    garage_capacity[previous_click_block.textContent]['SchedActivity3'] = true
 
     //km_run_input.value = km_run_input.value + " km"
     km_run_div.style.pointerEvents = 'none'
