@@ -89,8 +89,8 @@ const car_type_input = document.querySelector('body #schedule-main #schedule-bod
 const owner_name_input = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-name-input')
 const owner_address_input = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-address-input')
 
-const add_new_btn = document.querySelector('body #schedule-main #schedule-body #add-new-sched button')
-
+const add_new_btn = document.querySelector('body #schedule-main #schedule-body #add-new-sched #add-new-sched-btn')
+const add_new_btn_cancel = document.querySelector('body #schedule-main #schedule-body #add-new-sched #cancel-new-sched-btn')
 
 let sched_counter = 0
 let garage_block_arr = []
@@ -369,7 +369,7 @@ occupy_space.addEventListener('click', function(){
         }
     }
 
-    logic_info_div.style.pointerEvents = 'auto'
+    logic_info_div.style.pointerEvents = 'none'
     km_run_div.style.pointerEvents = 'auto'
     spare_parts_div.style.pointerEvents = 'auto'
    
@@ -483,14 +483,14 @@ occupy_cancel_btn.addEventListener('click', function(){
     spare_parts_div.style.pointerEvents = 'none'
     logic_info_div.style.pointerEvents = 'none'
 
-    battery_replace_btn.style.backgroundColor = 'white'
-    battery_replace_btn.style.backgroundColor = 'white'
+    // battery_replace_btn.style.backgroundColor = 'white'
+    // battery_replace_btn.style.backgroundColor = 'white'
 
-    brake_replace_btn.style.backgroundColor = 'white'
-    brake_replace_btn.style.backgroundColor = 'white'
+    // brake_replace_btn.style.backgroundColor = 'white'
+    // brake_replace_btn.style.backgroundColor = 'white'
 
-    light_replace_btn.style.backgroundColor = 'white'
-    light_replace_btn.style.backgroundColor = 'white'
+    // light_replace_btn.style.backgroundColor = 'white'
+    // light_replace_btn.style.backgroundColor = 'white'
 
     occupy_space.style.display = 'block'
     finalize_cancel_div.style.display = 'none'
@@ -510,24 +510,8 @@ edit_info_btn.addEventListener('click', function(){
         km_run_input.value = ""
     }, false)
 
-    car_model_input.addEventListener('click', function(){
-        car_model_input.value = ""
-    }, false)
-
-    car_type_input.addEventListener('click', function(){
-        car_type_input.value = ""
-    }, false)
-
-    owner_name_input.addEventListener('click', function(){
-        owner_name_input.value = ""
-    }, false)
-
-    owner_address_input.addEventListener('click', function(){
-        owner_address_input.value = ""
-    }, false)
-
     spare_parts_div.style.pointerEvents = 'auto'
-    logic_info_div.style.pointerEvents = 'auto'
+    logic_info_div.style.pointerEvents = 'none'
 
     if(answer){
         edit_info_btn.style.display = 'none'
@@ -593,7 +577,7 @@ arrow_left_day.addEventListener('click' , function(){
     
 }, false)
 
-add_new_div.addEventListener('click', function(){
+add_new_img.addEventListener('click', function(){
     add_new_div.style.top = '20%'
     add_new_div.style.left = '2%'
     add_new_div.style.width = '25%'
@@ -604,6 +588,7 @@ add_new_div.addEventListener('click', function(){
 
     add_new_logic_info.style.display = 'block'
     add_new_btn.style.display = 'block'
+    add_new_btn_cancel.style.display = 'block'
 }, false)
 
 add_new_btn.addEventListener('click', function(){
@@ -632,18 +617,40 @@ add_new_btn.addEventListener('click', function(){
     garage_capacity[garage_block_arr[sched_counter]]['OwnerName'] = owner_name_input.value
     garage_capacity[garage_block_arr[sched_counter]]['OwnerAddress'] = owner_address_input.value
 
-    // add_new_div.style.top = '35%'
-    // add_new_div.style.left = '5%'
-    // add_new_div.style.width = '15%'
-    // add_new_div.style.height = '30%'
+    sched_counter += 1
 
-    // add_new_lbl.style.display = 'block'
-    // add_new_img.style.display = 'block'
+    add_new_div.style.top = '35%'
+    add_new_div.style.left = '5%'
+    add_new_div.style.width = '15%'
+    add_new_div.style.height = '30%'
+
+    add_new_lbl.style.display = 'block'
+    add_new_img.style.display = 'block'
 
     add_new_logic_info.style.display = 'none'
     add_new_btn.style.display = 'none'
+    add_new_btn_cancel.style.display = 'none'
+
+    car_model_input.value = null
+    car_type_input.value = null
+    owner_name_input.value = null
+    owner_address_input.value = null
+
 }, false)
 
+add_new_btn_cancel.addEventListener('click', function(){
+    add_new_div.style.top = '35%'
+    add_new_div.style.left = '5%'
+    add_new_div.style.width = '15%'
+    add_new_div.style.height = '30%'
+
+    add_new_lbl.style.display = 'block'
+    add_new_img.style.display = 'block'
+
+    add_new_logic_info.style.display = 'none'
+    add_new_btn.style.display = 'none'
+    add_new_btn_cancel.style.display = 'none'
+}, false)
 
 function indexTransitionShow(){
     main_header.style.top = '-60%'

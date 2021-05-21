@@ -1131,10 +1131,10 @@ body #schedule-main #schedule-body #add-new-sched #logic-info-div{
     display: none;
 }
 
-body #schedule-main #schedule-body #add-new-sched button{
+body #schedule-main #schedule-body #add-new-sched #add-new-sched-btn{
     position: absolute;
     bottom:1%;
-    left:35%;
+    left:15%;
     width:30%;
     height:8%;
     display: none;
@@ -1146,7 +1146,23 @@ body #schedule-main #schedule-body #add-new-sched button{
     cursor: pointer;
 }
 
-body #schedule-main #schedule-body #add-new-sched button:hover{
+body #schedule-main #schedule-body #add-new-sched #cancel-new-sched-btn{
+    position: absolute;
+    bottom:1%;
+    left:50%;
+    width:30%;
+    height:8%;
+    display: none;
+    background: transparent;
+    color:#737373;
+    outline: none;
+    border:1px solid #737373;
+    transition:0.5s;
+    cursor: pointer;
+}
+
+body #schedule-main #schedule-body #add-new-sched #add-new-sched-btn:hover,
+body #schedule-main #schedule-body #add-new-sched #cancel-new-sched-btn:hover{
     color:#fff;
     border:1px solid #fff;
 }
@@ -1290,6 +1306,15 @@ body #schedule-main #schedule-body #current-day-div{
     transition: 1s;
     border-radius: 10px;
     background-color: #595959;
+}
+
+body #schedule-main #schedule-body #current-day-div #current-day-lbl{
+    position: absolute;
+    top:5%;
+    left:23%;
+    color:white;
+    opacity: 0.6;
+    font-size: 2vw;
 }
 
 body #schedule-main #schedule-body #current-day-div-1{
