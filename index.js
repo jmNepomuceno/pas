@@ -23,6 +23,8 @@ const bars_div = document.querySelector('body #garage-main #left-section-main #b
 const bars_body_div = document.querySelector('body #garage-main #left-section-main #bars-body-div')
 const card_vehicle_nav = document.querySelector('body #garage-main #left-section-main #bars-body-div label:nth-child(1)')
 const service_order_card_nav = document.querySelector('body #garage-main #left-section-main #bars-body-div label:nth-child(2)')
+const delivery_note_nav = document.querySelector('body #garage-main #left-section-main #bars-body-div label:nth-child(3)')
+
 
 const occupy_space = document.getElementById('occupy-space-btn')
 const km_run_div = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #km-run-div')
@@ -66,6 +68,10 @@ const garage_spaces_divs = document.querySelectorAll('body #garage-main #right-s
 
 const right_section_main = document.getElementById('right-section-main')
 
+/*****************************************INQUIRE*************************************************/
+
+const inquire_main = document.querySelector('body #inquire-main')
+
 // every block or space in the garage section
 let garage_capacity = {}
 
@@ -83,6 +89,7 @@ bars_div.addEventListener('click', function(){
 service_order_card_nav.addEventListener('click', function(){
     service_card_section.style.display = 'block'
     card_vehicle_section.style.display = 'none'
+    //delivery_note_section.style.display = 'none'
 
     bars_body_div.style.display = 'none'
 }, false)
@@ -90,6 +97,16 @@ service_order_card_nav.addEventListener('click', function(){
 card_vehicle_nav.addEventListener('click', function(){
     card_vehicle_section.style.display = 'block'
     service_card_section.style.display = 'none'
+    //delivery_note_section.style.display = 'none'
+
+    bars_body_div.style.display = 'none'
+}, false)
+
+delivery_note_nav.addEventListener('click', function(){
+    delivery_note_section.style.display = 'block'
+    service_card_section.style.display = 'none'
+    card_vehicle_section.style.display = 'none'
+
     bars_body_div.style.display = 'none'
 }, false)
 
@@ -344,29 +361,61 @@ occupy_done_btn.addEventListener('click', function(){
     }
 
     //get the selected button on all of the spare Parts
-    if(battery_good_btn.style.backgroundColor == 'white'){
+    if(battery_replace_btn.style.backgroundColor == 'white' && battery_good_btn.style.backgroundColor == 'white'){
+        alert("Need to fill up everything")
+        return 
+    }else if(battery_good_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['Battery'] = true 
     }else if(battery_replace_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['Battery'] = false 
     }
 
-    if(brake_good_btn.style.backgroundColor == 'white'){
+    if(brake_replace_btn.style.backgroundColor == 'white' && brake_good_btn.style.backgroundColor == 'white'){
+        alert("Need to fill up everything")
+        return 
+    }else if(brake_good_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['Brakes'] = true 
     }else if(brake_replace_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['Brakes'] = false 
     }
 
     
-    if(light_good_btn.style.backgroundColor == 'white'){
+    if(light_replace_btn.style.backgroundColor == 'white' && light_good_btn.style.backgroundColor == 'white'){
+        alert("Need to fill up everything")
+        return 
+    }else if(light_good_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['CarLights'] = true 
     }else if(light_replace_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['CarLights'] = false 
     }
 
-    if(windshield_good_btn.style.backgroundColor == 'white'){
+    if(windshield_replace_btn.style.backgroundColor == 'white' && windshield_good_btn.style.backgroundColor == 'white'){
+        alert("Need to fill up everything")
+        return 
+    }else if(windshield_good_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['WindShields'] = true 
     }else if(windshield_replace_btn.style.backgroundColor == 'white'){
         garage_capacity[previous_click_block.textContent]['WindShields'] = false 
+    }
+
+    if(car_model_input.value == ""){
+        alert("Need to fill up everything")
+        return 
+    }
+
+    if(car_type_input.value == ""){
+        alert("Need to fill up everything")
+        return 
+    }
+
+    if(owner_name_input.value == ""){
+        alert("Need to fill up everything")
+        return 
+    }
+
+    if(owner_address_input.value == ""){
+        alert("Need to fill up everything")
+        return 
     }
 
     garage_capacity[previous_click_block.textContent]['CarModel'] = car_model_input.value
@@ -411,6 +460,8 @@ occupy_done_btn.addEventListener('click', function(){
             document.getElementById('garage-space-row' + i + '-col' + j).style.pointerEvents = 'auto'
         }
     }
+
+    alert("You can now view all the designated dates on the Service Order Card. Just click the navigation bars icon on the left side.")
 
     console.log(garage_capacity)
 }, false)

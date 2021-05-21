@@ -167,6 +167,19 @@ body #garage-main #left-section-main #bars-body-div label:nth-child(2){
     cursor: pointer;
 }
 
+body #garage-main #left-section-main #bars-body-div label:nth-child(3){
+    position: absolute;
+    top:66.6%;
+    width:100%;
+    height:33.3%;
+    font-size: 1.5vw;
+    line-height: 1.5em;
+    color:white;
+    border-bottom: 1px solid #e99796;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
 body #garage-main #left-section-main #border-lining{
     position: absolute;
     top:0;
@@ -998,6 +1011,945 @@ body #garage-main #right-section-main{
 }
 
 body #garage-main #right-section-main .garage-spaces{
+    width:20%;
+    height:15%;
+    border:1px solid #2A2B2DFF;
+    float:left;
+    margin-top:2%;
+    margin-left:4.3%;
+    margin-bottom: 2%;
+    border-radius: 5%;
+    cursor: pointer;
+    text-align:center;
+    font-size:2vw;
+    line-height: 25vh;
+    background-color:white;
+    background: url(./imgs/free.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 50%;
+    opacity: 0.3;
+    color: #808080;
+}
+
+/***************************************INQUIRE*******************************************/
+
+body #inquire-main{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    visibility:hidden;
+}
+
+body #inquire-main #left-section-main{
+    position:absolute;
+    top:6%;
+    left:-25%;
+    width:25%;
+    height:94%;
+    background: #2A2B2DFF;
+    opacity: 0;
+    transition: 1s;
+    overflow: auto;
+}
+
+body #inquire-main #left-section-main::-webkit-scrollbar {
+    display: none;
+}
+
+body #inquire-main #left-section-main #bars-div{
+   position:absolute;
+   top:1%;
+   left:4%;
+   width:10%;
+   height:5%;
+   cursor:pointer;
+} 
+
+body #inquire-main #left-section-main #bars-body-div{
+    position:absolute;
+    top:6%;
+    left:10%;
+    width:80%;
+    height:15%;
+    border: 5px solid #d9514eff;
+    background: #2a2b2d;
+    cursor:pointer;
+    z-index: 1;
+    display: none;
+} 
+
+body #inquire-main #left-section-main #bars-body-div label:nth-child(1){
+    position: absolute;
+    top:0;
+    width:100%;
+    height:33.3%;
+    font-size: 1.5vw;
+    line-height: 1.5em;
+    color:white;
+    border-bottom: 1px solid #e99796;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+body #inquire-main #left-section-main #bars-body-div label:nth-child(2){
+    position: absolute;
+    top:33.3%;
+    width:100%;
+    height:33.3%;
+    font-size: 1.5vw;
+    line-height: 1.5em;
+    color:white;
+    border-bottom: 1px solid #e99796;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+body #inquire-main #left-section-main #bars-body-div label:nth-child(3){
+    position: absolute;
+    top:66.6%;
+    width:100%;
+    height:33.3%;
+    font-size: 1.5vw;
+    line-height: 1.5em;
+    color:white;
+    border-bottom: 1px solid #e99796;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+body #inquire-main #left-section-main #border-lining{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:200%;
+    border:10px solid #2DA8D8FF;
+}
+
+body #inquire-main #middle-section-main{
+    position:absolute;
+    top:6%;
+    left:-45%;
+    width:5%;
+    height:94%;
+    opacity: 0;
+    transition: 1s;
+}
+
+body #inquire-main #middle-section-main #border-lining-b{
+    position: absolute;
+    left:0;
+    width:20%;
+    height:100%;
+    border-right:15px solid #3dafdb;
+}
+
+body #inquire-main #middle-section-main #border-lining-c{
+    position: absolute;
+    left:20%;
+    width:20%;
+    height:100%;
+    border-right:15px solid #53b7df;
+}
+
+body #inquire-main #middle-section-main #border-lining-d{
+    position: absolute;
+    left:40%;
+    width:20%;
+    height:100%;
+    border-right:15px solid #68c0e3;
+}
+
+body #inquire-main #middle-section-main #border-lining-e{
+    position: absolute;
+    left:60%;
+    width:20%;
+    height:100%;
+    border-right:15px solid  #7ec9e7;
+}
+
+body #inquire-main #middle-section-main #border-lining-f{
+    position: absolute;
+    left:80%;
+    width:20%;
+    height:100%;
+    border-right:15px solid  #93d2eb;
+}
+
+/*******************************************CARD OF THE VEHICLE SECTION****************************/
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn{
+    position: fixed;
+    bottom:1%;
+    left:0;
+    padding: 10px 30px;
+    width:25%;
+    color: rgba(255, 255, 255, 0.4);
+    background: #2a2b2d;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 1vw;
+    transition: 0.5s;
+    text-decoration: none;
+    border-left:10px solid #2DA8D8FF;
+    border-right:10px solid #2DA8D8FF;
+    display: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn span{
+    display: block;
+    position:absolute;
+    background: #2894ff;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn span:nth-child(1){
+    left:0;
+    bottom:0;
+    width:1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn span:nth-child(2){
+    left:0;
+    bottom:0;
+    width:100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn span:nth-child(3){
+    right:0;
+    bottom:0;
+    width:1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn span:nth-child(4){
+    left:0;
+    top:0;
+    width:100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #card-vehicle{
+    position: absolute;
+    top:5%;
+    left:18%;
+    width:65%;
+    height:5%;
+    border-bottom:1px solid white;
+    text-align: center;
+    color:#fff;
+    line-height: 2em;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div{
+    position: absolute;
+    top:12%;
+    left:10%;
+    width:80%;
+    height:45%;
+    color: white;
+    /* border-bottom:1px solid white; */
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #logic-info-lbl{
+    position: absolute;
+    top:2%;
+    left:10%;
+    font-size: 1.5vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #car-model{
+    position: absolute;
+    top:13%;
+    left:22%;
+    font-size: 1.2vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #car-model-img{
+    position: absolute;
+    top:6%;
+    left:60%;
+    width:13%;
+    height:20%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #car-model-input{
+    position: absolute;
+    top:22%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #car-type{
+    position: absolute;
+    top:36%;
+    left:23%;
+    font-size: 1.2vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #car-type-img{
+    position: absolute;
+    top:29%;
+    left:58%;
+    width:13%;
+    height:20%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #car-type-input{
+    position: absolute;
+    top:45%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+/*  */
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #owner-name{
+    position: absolute;
+    top:59%;
+    left:15%;
+    font-size: 1.2vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #owner-name-img{
+    position: absolute;
+    top:58%;
+    left:65%;
+    width:13%;
+    height:10%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #owner-name-input{
+    position: absolute;
+    top:69%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+/*  */
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #owner-address{
+    position: absolute;
+    top:82%;
+    left:15%;
+    font-size: 1.2vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #owner-address-img{
+    position: absolute;
+    top:80%;
+    left:75%;
+    width:13%;
+    height:8%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #logic-info-div #owner-address-input{
+    position: absolute;
+    top:90%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #km-run-div{
+    position: absolute;
+    top:60%;
+    left:10%;
+    width:80%;
+    height:15%;
+    color: white;
+    border-top:5px solid #186381;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #km-run-div label{
+    position: absolute;
+    top:15%;
+    left:10%;
+    font-size: 1.5vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #km-run-div img{
+    position: absolute;
+    top:15%;
+    left:73%;
+    width:20%;
+    height:25%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #km-run-div input{
+    position: absolute;
+    top:50%;
+    left:15%;
+    width:65%;
+    height:35%;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #km-run-div input:focus{
+    outline: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div{
+    position: absolute;
+    top:76%;
+    left:10%;
+    width:80%;
+    height:60%;
+    color: white;
+    border-top:5px solid #186381;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #spare-parts-lbl{
+    position: absolute;
+    top:5%;
+    left:25%;
+    font-size: 1.5vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #battery-lbl{
+    position: absolute;
+    top:15%;
+    left:30%;
+    font-size: 1.2vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #battery-img{
+    position: absolute;
+    top:13%;
+    left:58%;
+    width:10%;
+    height:8%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #battery-replace-btn{
+    position: absolute;
+    top:22%;
+    left:15%;
+    width:30%;
+    height:6%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #battery-good-btn{
+    position: absolute;
+    top:22%;
+    right:15%;
+    width:30%;
+    height:6%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #battery-replace-btn,
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #battery-good-btn{
+    border-radius:5px;
+    color:#2A2b2dff;
+    cursor: pointer;
+    font-size: 1vw;
+    background-color:white;
+    border:none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #battery-replace-btn:focus,
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #battery-good-btn:focus{
+    outline: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #brakes-lbl{
+    position: absolute;
+    top:33%;
+    left:32%;
+    font-size: 1.2vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #brake-img{
+    position: absolute;
+    top:33%;
+    left:56%;
+    width:10%;
+    height:5%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #brake-replace-btn{
+    position: absolute;
+    top:40%;
+    left:15%;
+    width:30%;
+    height:6%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #brake-good-btn{
+    position: absolute;
+    top:40%;
+    right:15%;
+    width:30%;
+    height:6%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #brake-replace-btn,
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #brake-good-btn{
+    border-radius:5px;
+    color:#2A2b2dff;
+    cursor: pointer;
+    font-size: 1vw;
+    background-color:white;
+    border:none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #brake-replace-btn:focus,
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #brake-good-btn:focus{
+    outline: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #light-lbl{
+    position: absolute;
+    top:50%;
+    left:20%;
+    font-size: 1.2vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #light-img{
+    position: absolute;
+    top:50%;
+    left:60%;
+    width:10%;
+    height:5%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #light-replace-btn{
+    position: absolute;
+    top:56%;
+    left:15%;
+    width:30%;
+    height:6%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #light-good-btn{
+    position: absolute;
+    top:56%;
+    right:15%;
+    width:30%;
+    height:6%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #light-replace-btn,
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #light-good-btn{
+    border-radius:5px;
+    color:#2A2b2dff;
+    cursor: pointer;
+    font-size: 1vw;
+    background-color:white;
+    border:none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #light-replace-btn:focus,
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #light-good-btn:focus{
+    outline: none;
+}
+
+/*  */
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-lbl{
+    position: absolute;
+    top:68%;
+    left:20%;
+    font-size: 1.2vw;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-img{
+    position: absolute;
+    top:68%;
+    left:64%;
+    width:10%;
+    height:5%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-replace-btn{
+    position: absolute;
+    top:74%;
+    left:15%;
+    width:30%;
+    height:6%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-good-btn{
+    position: absolute;
+    top:74%;
+    right:15%;
+    width:30%;
+    height:6%;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-replace-btn,
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-good-btn{
+    border-radius:5px;
+    color:#2A2b2dff;
+    cursor: pointer;
+    font-size: 1vw;
+    background-color:white;
+    border:none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-replace-btn:focus,
+body #inquire-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-good-btn:focus{
+    outline: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #car-acts-div{
+    position: absolute;
+    top:75%;
+    left:10%;
+    width:80%;
+    height:20%;
+    color: white;
+    border:1px solid white;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #finalize-cancel-div{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width: 25%;
+    height:7%;
+    border-left:10px solid #2DA8D8FF;
+    border-right:10px solid #2DA8D8FF;
+    background: #2a2b2d;
+    display:none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #finalize-cancel-div #done-btn{
+    position:absolute;
+    top:15%;
+    left:10%;
+    width:35%;
+    height:70%;
+    cursor: pointer;
+    color: #737373;
+    background: transparent;
+    border:1px solid #006600;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #finalize-cancel-div #done-btn:focus{
+    outline: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #finalize-cancel-div #done-btn:hover{
+    color:#fff;
+    border:1px solid #00cc00;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #finalize-cancel-div #cancel-btn{
+    position:absolute;
+    top:15%;
+    right:10%;
+    width:35%;
+    height:70%;
+    cursor: pointer;
+    color: #737373;
+    background: transparent;
+    border:1px solid #660000;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #finalize-cancel-div #cancel-btn:focus{
+    outline: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #finalize-cancel-div #cancel-btn:hover{
+    color:#fff;
+    border:1px solid #cc0000;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #edit-info-btn{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:25%;
+    height:5%;
+    cursor: pointer;
+    color: #737373;
+    border-left:10px solid #2DA8D8FF;
+    border-right:10px solid #2DA8D8FF;
+    border-top: none;
+    border-bottom: none;
+    background: #2a2b2d;
+    transition: 0.5s;
+    outline: none;
+    display: none;
+}
+
+body #inquire-main #left-section-main #card-vehicle-section #edit-info-btn:hover{
+    color:#fff;
+    border-top:1px solid #2DA8D8FF;
+    border-bottom:1px solid #2DA8D8FF;
+}
+
+/*******************************************SERVICE ORDER CARD SECTION****************************/
+/* body #inquire-main #left-section-main #card-vehicle-section{
+    display: none;
+} */
+body #inquire-main #left-section-main #service-card-section{
+    display: none;
+}
+body #inquire-main #left-section-main #service-card-section #service-card{
+    position: absolute;
+    top:5%;
+    left:18%;
+    width:65%;
+    height:5%;
+    border-bottom:1px solid white;
+    text-align: center;
+    color:#fff;
+    line-height: 2em;
+}
+
+body #inquire-main #left-section-main #service-card-section #service-time-div{
+    position: absolute;
+    top:12%;
+    left:10%;
+    width:80%;
+    height:15%;
+    color: white;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #inquire-main #left-section-main #service-card-section #service-time-div #service-time-lbl{
+    position: absolute;
+    top:10%;
+    left:12%;
+    font-size: 1.5vw;
+}
+
+body #inquire-main #left-section-main #service-card-section #service-time-div #service-time-input{
+    position: absolute;
+    top: 45%;
+    left:9%;
+    width:80%;
+    height:35%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #inquire-main #left-section-main #service-card-section #date-leave-div{
+    position: absolute;
+    top:30%;
+    left:10%;
+    width:80%;
+    height:15%;
+    color: white;
+    border-top:5px solid #186381;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #inquire-main #left-section-main #service-card-section #date-leave-div #date-leave-lbl{
+    position: absolute;
+    top:10%;
+    left:12%;
+    font-size: 1.5vw;
+}
+
+body #inquire-main #left-section-main #service-card-section #date-leave-div #date-leave-input{
+    position: absolute;
+    top: 45%;
+    left:9%;
+    width:80%;
+    height:35%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #inquire-main #left-section-main #service-card-section #scheduled-acts-div{
+    position: absolute;
+    top:48%;
+    left:10%;
+    width:80%;
+    height:35%;
+    color: white;
+    border-top:5px solid #186381;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body #inquire-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-1{
+    position: absolute;
+    top:10%;
+    left:12%;
+    font-size: 1.5vw;
+}
+
+body #inquire-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-1{
+    position: absolute;
+    top: 21%;
+    left:9%;
+    width:80%;
+    height:13%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #inquire-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-2{
+    position: absolute;
+    top:40%;
+    left:12%;
+    font-size: 1.5vw;
+}
+
+body #inquire-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-2{
+    position: absolute;
+    top: 50%;
+    left:9%;
+    width:80%;
+    height:15%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #inquire-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-3{
+    position: absolute;
+    top:68%;
+    left:12%;
+    font-size: 1.5vw;
+}
+
+body #inquire-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-3{
+    position: absolute;
+    top: 80%;
+    left:9%;
+    width:80%;
+    height:15%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #inquire-main #right-section-main{
+    position:absolute;
+    top:6%;
+    right:-25%;
+    width:70%;
+    height:94%;
+    background: #a9dbef;
+    opacity: 0;
+    transition: 1s;
+    overflow: auto;
+}
+
+body #inquire-main #right-section-main .garage-spaces{
     width:20%;
     height:15%;
     border:1px solid #2A2B2DFF;
