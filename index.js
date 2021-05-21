@@ -50,11 +50,6 @@ const windshield_good_btn = document.querySelector('body #garage-main #left-sect
 
 const logic_info_div = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div')
 
-const car_model_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-model-input')
-const car_type_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-type-input')
-const owner_name_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-name-input')
-const owner_address_input = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-address-input')
-
 //service card section
 const service_time_input = document.querySelector('body #garage-main #left-section-main #service-card-section #service-time-div #service-time-input')
 const date_leave_input = document.querySelector('body #garage-main #left-section-main #service-card-section #date-leave-div #date-leave-input')
@@ -79,6 +74,29 @@ const current_day_div_1 = document.querySelector('body #schedule-main #schedule-
 const current_day_div_2 = document.querySelector('body #schedule-main #schedule-body #current-day-div-2')
 
 const arrow_left_day = document.querySelector('body #schedule-main #schedule-body .arrow-left')
+
+const add_new_div = document.querySelector('body #schedule-main #schedule-body #add-new-sched')
+
+const add_new_lbl = document.querySelector('body #schedule-main #schedule-body #add-new-sched #add-new-sched-lbl')
+const add_new_img = document.querySelector('body #schedule-main #schedule-body #add-new-sched #add-new-sched-img')
+
+const add_new_logic_info = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div')
+const car_model_input = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-model-input')
+const car_type_input = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-type-input')
+const owner_name_input = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-name-input')
+const owner_address_input = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-address-input')
+
+const add_new_btn = document.querySelector('body #schedule-main #schedule-body #add-new-sched button')
+
+
+let sched_counter = 0
+let garage_block_arr = []
+
+for(let i = 1; i <= 10; i++){
+    for(let j = 1; j <= 4; j++){
+        garage_block_arr.push('G' + i + '-B' + j)
+    }
+}
 
 // every block or space in the garage section
 let garage_capacity = {}
@@ -406,30 +424,6 @@ occupy_done_btn.addEventListener('click', function(){
         garage_capacity[previous_click_block.textContent]['WindShields'] = false 
     }
 
-    if(car_model_input.value == ""){
-        alert("Need to fill up everything")
-        return 
-    }
-
-    if(car_type_input.value == ""){
-        alert("Need to fill up everything")
-        return 
-    }
-
-    if(owner_name_input.value == ""){
-        alert("Need to fill up everything")
-        return 
-    }
-
-    if(owner_address_input.value == ""){
-        alert("Need to fill up everything")
-        return 
-    }
-
-    garage_capacity[previous_click_block.textContent]['CarModel'] = car_model_input.value
-    garage_capacity[previous_click_block.textContent]['CarType'] = car_type_input.value
-    garage_capacity[previous_click_block.textContent]['OwnerName'] = owner_name_input.value
-    garage_capacity[previous_click_block.textContent]['OwnerAddress'] = owner_address_input.value
     garage_capacity[previous_click_block.textContent]['Availability'] = 'OCCUPIED'
     garage_capacity[previous_click_block.textContent]['Kilometer Run'] = km_run_input_int_val
     garage_capacity[previous_click_block.textContent]['Edit Info Enable'] = true
@@ -594,6 +588,48 @@ arrow_left_day.addEventListener('click' , function(){
         rotate_day = 0
     }
     
+}, false)
+
+add_new_div.addEventListener('click', function(){
+    add_new_div.style.top = '20%'
+    add_new_div.style.left = '2%'
+    add_new_div.style.width = '25%'
+    add_new_div.style.height = '70%'
+
+    add_new_lbl.style.display = 'none'
+    add_new_img.style.display = 'none'
+
+    add_new_logic_info.style.display = 'block'
+    add_new_btn.style.display = 'block'
+}, false)
+
+add_new_btn.addEventListener('click', function(){
+    console.log(garage_block_arr)
+    console.log(garage_capacity)
+    if(car_model_input.value == ""){
+        alert("Need to fill up everything")
+        return 
+    }
+
+    if(car_type_input.value == ""){
+        alert("Need to fill up everything")
+        return 
+    }
+
+    if(owner_name_input.value == ""){
+        alert("Need to fill up everything")
+        return 
+    }
+
+    if(owner_address_input.value == ""){
+        alert("Need to fill up everything")
+        return 
+    }
+
+    garage_capacity[garage_block_arr[sched_counter]]['CarModel'] = car_model_input.value
+    garage_capacity[garage_block_arr[sched_counter]]['CarType'] = car_type_input.value
+    garage_capacity[garage_block_arr[sched_counter]]['OwnerName'] = owner_name_input.value
+    garage_capacity[garage_block_arr[sched_counter]]['OwnerAddress'] = owner_address_input.value
 }, false)
 
 

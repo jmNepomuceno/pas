@@ -1041,39 +1041,6 @@ body #schedule-main{
     visibility:hidden;
 }
 
-body #schedule-main #border-fade{
-    position: absolute;
-    top:6%;
-    left:0;
-    width:100%;
-    height:15%;
-    z-index: 1;
-}
-
-body #schedule-main #border-fade #border-fade-1{
-    width: 100%;
-    height:25%;
-    background:#d9514eff;
-}
-
-body #schedule-main #border-fade #border-fade-2{
-    width: 100%;
-    height:25%;
-    background:#db5957;
-}
-
-body #schedule-main #border-fade #border-fade-3{
-    width: 100%;
-    height:25%;
-    background:#e06e6c;
-}
-
-body #schedule-main #border-fade #border-fade-4{
-    width: 100%;
-    height:25%;
-    background:#e48281;
-}
-
 body #schedule-main #schedule-body{
     position:absolute;
     top:6%;
@@ -1085,6 +1052,232 @@ body #schedule-main #schedule-body{
     opacity: 0;
     transition: 1s;
     overflow: auto;
+}
+
+body #schedule-main #schedule-body #border-fade{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:15%;
+}
+
+body #schedule-main #schedule-body #border-fade #border-fade-1{
+    width: 100%;
+    height:25%;
+    background:#d9514eff;
+}
+
+body #schedule-main #schedule-body #border-fade #border-fade-2{
+    width: 100%;
+    height:25%;
+    background:#db5957;
+}
+
+body #schedule-main #schedule-body #border-fade #border-fade-3{
+    width: 100%;
+    height:25%;
+    background:#e06e6c;
+}
+
+body #schedule-main #schedule-body #border-fade #border-fade-4{
+    width: 100%;
+    height:25%;
+    background:#e48281;
+}
+
+body #schedule-main #schedule-body #add-new-sched{
+    position: absolute;
+    top: 35%;
+    left:5%;
+    width:15%;
+    height:30%;
+    border: 8px solid #2DA8D8FF;
+    background-color: #595959;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+body #schedule-main #schedule-body #add-new-sched #add-new-sched-lbl{
+    position: absolute;
+    top:40%;
+    left:20%;
+    font-weight: bold;
+    color:#fff;
+    font-size: 2vw;
+    opacity: 0.3;
+}
+
+body #schedule-main #schedule-body #add-new-sched #add-new-sched-img{
+    position: absolute;
+    top:15%;
+    left:22%;
+    width:65%;
+    height: 75%;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+/*  */
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div{
+    position: absolute;
+    top:1%;
+    left:5%;
+    width:90%;
+    height:90%;
+    color: white;
+    opacity: 0.5;
+    display: none;
+}
+
+body #schedule-main #schedule-body #add-new-sched button{
+    position: absolute;
+    bottom:1%;
+    left:35%;
+    width:30%;
+    height:8%;
+    display: none;
+    background: transparent;
+    color:#737373;
+    outline: none;
+    border:1px solid #737373;
+    transition:0.5s;
+    cursor: pointer;
+}
+
+body #schedule-main #schedule-body #add-new-sched button:hover{
+    color:#fff;
+    border:1px solid #fff;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #logic-info-lbl{
+    position: absolute;
+    top:2%;
+    left:10%;
+    font-size: 1.5vw;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-model{
+    position: absolute;
+    top:13%;
+    left:22%;
+    font-size: 1.2vw;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-model-img{
+    position: absolute;
+    top:6%;
+    left:60%;
+    width:13%;
+    height:20%;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-model-input{
+    position: absolute;
+    top:22%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-type{
+    position: absolute;
+    top:36%;
+    left:23%;
+    font-size: 1.2vw;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-type-img{
+    position: absolute;
+    top:29%;
+    left:58%;
+    width:13%;
+    height:20%;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-type-input{
+    position: absolute;
+    top:45%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+/*  */
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-name{
+    position: absolute;
+    top:59%;
+    left:15%;
+    font-size: 1.2vw;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-name-img{
+    position: absolute;
+    top:58%;
+    left:65%;
+    width:13%;
+    height:10%;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-name-input{
+    position: absolute;
+    top:69%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+/*  */
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-address{
+    position: absolute;
+    top:82%;
+    left:15%;
+    font-size: 1.2vw;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-address-img{
+    position: absolute;
+    top:80%;
+    left:75%;
+    width:13%;
+    height:8%;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-address-input{
+    position: absolute;
+    top:90%;
+    left:9%;
+    width:80%;
+    height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
 }
 
 body #schedule-main #schedule-body #current-day-div{
