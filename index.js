@@ -68,9 +68,11 @@ const garage_spaces_divs = document.querySelectorAll('body #garage-main #right-s
 
 const right_section_main = document.getElementById('right-section-main')
 
-/*****************************************INQUIRE*************************************************/
+/*****************************************GARAGE*************************************************/
 
-const inquire_main = document.querySelector('body #inquire-main')
+const schedule_main = document.querySelector('body #schedule-main')
+
+const schedule_body = document.querySelector('body #schedule-main #schedule-body')
 
 // every block or space in the garage section
 let garage_capacity = {}
@@ -589,7 +591,7 @@ garage_h2.addEventListener('click', function(){
 
     right_section_main.style.opacity = '1'
     right_section_main.style.right = "0"
-
+    closeSchedule()
 }, false)
 
 /*****************************************GARAGE*************************************************/
@@ -607,23 +609,37 @@ home_h2.addEventListener('click', function(){
     fade_divs[4].style.top = '94%'
 
     closeGarage()
-
+    closeSchedule()
 }, false)
 
 about_h2.addEventListener('click', function(){
     indexTransitionShow()
 
     closeGarage()
+    closeSchedule()
 }, false)
 
 schedule_h2.addEventListener('click', function(){
     indexTransitionShow()
+    schedule_main.style.zIndex = '1'
+    schedule_main.style.visibility = 'visible'
 
+    schedule_body.style.opacity = '1'
+    schedule_body.style.left = "0"
     closeGarage()
 }, false)
 
+function closeSchedule(){
+    schedule_main.style.zIndex = '-1'
+    schedule_main.style.visibility = 'hidden'
+
+    schedule_body.style.opacity = '0'
+    schedule_body.style.left = "-25%"
+
+}
+
 unknown_h2.addEventListener('click', function(){
     indexTransitionShow()
-
+    closeSchedule()
     closeGarage()
 }, false)
