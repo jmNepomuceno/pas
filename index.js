@@ -74,6 +74,12 @@ const schedule_main = document.querySelector('body #schedule-main')
 
 const schedule_body = document.querySelector('body #schedule-main #schedule-body')
 
+const current_day_div = document.querySelector('body #schedule-main #schedule-body #current-day-div')
+const current_day_div_1 = document.querySelector('body #schedule-main #schedule-body #current-day-div-1')
+const current_day_div_2 = document.querySelector('body #schedule-main #schedule-body #current-day-div-2')
+
+const arrow_left_day = document.querySelector('body #schedule-main #schedule-body .arrow-left')
+
 // every block or space in the garage section
 let garage_capacity = {}
 
@@ -531,6 +537,65 @@ edit_info_btn.addEventListener('click', function(){
         finalize_cancel_div.style.display = 'block'
     }
 },false)
+/*****************************************GARAGE*************************************************/
+let rotate_day = 1
+arrow_left_day.addEventListener('click' , function(){
+    console.log(rotate_day)
+    if(rotate_day == 0){
+        current_day_div.style.width = '25%'
+        current_day_div.style.height = '50%'
+        current_day_div.style.top = '25%'
+        current_day_div.style.left = '38%'
+
+        current_day_div_1.style.width = '10%'
+        current_day_div_1.style.height = '20%'
+        current_day_div_1.style.top = '40%'
+        current_day_div_1.style.left = '65%'
+
+        current_day_div_2.style.width = '10%'
+        current_day_div_2.style.height = '20%'
+        current_day_div_2.style.top = '40%'
+        current_day_div_2.style.left = '78%' 
+        
+        rotate_day += 1
+    }else if(rotate_day == 1){
+        current_day_div_1.style.width = '25%'
+        current_day_div_1.style.height = '50%'
+        current_day_div_1.style.top = '25%'
+        current_day_div_1.style.left = '38%'
+
+        current_day_div_2.style.width = '10%'
+        current_day_div_2.style.height = '20%'
+        current_day_div_2.style.top = '40%'
+        current_day_div_2.style.left = '65%'
+
+        current_day_div.style.width = '10%'
+        current_day_div.style.height = '20%'
+        current_day_div.style.top = '40%'
+        current_day_div.style.left = '78%' 
+        
+        rotate_day += 1
+    }else if(rotate_day == 2){
+        current_day_div_2.style.width = '25%'
+        current_day_div_2.style.height = '50%'
+        current_day_div_2.style.top = '25%'
+        current_day_div_2.style.left = '38%'
+
+        current_day_div.style.width = '10%'
+        current_day_div.style.height = '20%'
+        current_day_div.style.top = '40%'
+        current_day_div.style.left = '65%'
+
+        current_day_div_1.style.width = '10%'
+        current_day_div_1.style.height = '20%'
+        current_day_div_1.style.top = '40%'
+        current_day_div_1.style.left = '78%'
+
+        rotate_day = 0
+    }
+    
+}, false)
+
 
 function indexTransitionShow(){
     main_header.style.top = '-60%'
@@ -594,8 +659,6 @@ garage_h2.addEventListener('click', function(){
     closeSchedule()
 }, false)
 
-/*****************************************GARAGE*************************************************/
-
 home_h2.addEventListener('click', function(){
     main_header.style.top = '0'
 
@@ -634,7 +697,7 @@ function closeSchedule(){
     schedule_main.style.visibility = 'hidden'
 
     schedule_body.style.opacity = '0'
-    schedule_body.style.left = "-25%"
+    schedule_body.style.left = "-100%"
 
 }
 
