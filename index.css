@@ -103,7 +103,7 @@ body #garage-main{
     visibility:hidden;
 }
 
-body #garage-main #left-section-main{
+body #garage-main #left-section-garage-main{
     position:absolute;
     top:6%;
     left:-25%;
@@ -115,11 +115,11 @@ body #garage-main #left-section-main{
     overflow: auto;
 }
 
-body #garage-main #left-section-main::-webkit-scrollbar {
+body #garage-main #left-section-garage-main::-webkit-scrollbar {
     display: none;
 }
 
-body #garage-main #left-section-main #bars-div{
+body #garage-main #left-section-garage-main #bars-div{
    position:absolute;
    top:1%;
    left:4%;
@@ -128,7 +128,7 @@ body #garage-main #left-section-main #bars-div{
    cursor:pointer;
 } 
 
-body #garage-main #left-section-main #bars-body-div{
+body #garage-main #left-section-garage-main #bars-body-div{
     position:absolute;
     top:6%;
     left:10%;
@@ -141,7 +141,7 @@ body #garage-main #left-section-main #bars-body-div{
     display: none;
 } 
 
-body #garage-main #left-section-main #bars-body-div label:nth-child(1){
+body #garage-main #left-section-garage-main #bars-body-div label:nth-child(1){
     position: absolute;
     top:0;
     width:100%;
@@ -154,7 +154,7 @@ body #garage-main #left-section-main #bars-body-div label:nth-child(1){
     cursor: pointer;
 }
 
-body #garage-main #left-section-main #bars-body-div label:nth-child(2){
+body #garage-main #left-section-garage-main #bars-body-div label:nth-child(2){
     position: absolute;
     top:33.3%;
     width:100%;
@@ -167,7 +167,7 @@ body #garage-main #left-section-main #bars-body-div label:nth-child(2){
     cursor: pointer;
 }
 
-body #garage-main #left-section-main #bars-body-div label:nth-child(3){
+body #garage-main #left-section-garage-main #bars-body-div label:nth-child(3){
     position: absolute;
     top:66.6%;
     width:100%;
@@ -180,7 +180,7 @@ body #garage-main #left-section-main #bars-body-div label:nth-child(3){
     cursor: pointer;
 }
 
-body #garage-main #left-section-main #border-lining{
+body #garage-main #left-section-garage-main #border-lining{
     position: absolute;
     top:0;
     left:0;
@@ -189,7 +189,7 @@ body #garage-main #left-section-main #border-lining{
     border:10px solid #2DA8D8FF;
 }
 
-body #garage-main #middle-section-main{
+body #garage-main #middle-section-garage-main{
     position:absolute;
     top:6%;
     left:-45%;
@@ -199,7 +199,7 @@ body #garage-main #middle-section-main{
     transition: 1s;
 }
 
-body #garage-main #middle-section-main #border-lining-b{
+body #garage-main #middle-section-garage-main #border-lining-b{
     position: absolute;
     left:0;
     width:20%;
@@ -207,7 +207,7 @@ body #garage-main #middle-section-main #border-lining-b{
     border-right:15px solid #3dafdb;
 }
 
-body #garage-main #middle-section-main #border-lining-c{
+body #garage-main #middle-section-garage-main #border-lining-c{
     position: absolute;
     left:20%;
     width:20%;
@@ -215,7 +215,7 @@ body #garage-main #middle-section-main #border-lining-c{
     border-right:15px solid #53b7df;
 }
 
-body #garage-main #middle-section-main #border-lining-d{
+body #garage-main #middle-section-garage-main #border-lining-d{
     position: absolute;
     left:40%;
     width:20%;
@@ -223,7 +223,7 @@ body #garage-main #middle-section-main #border-lining-d{
     border-right:15px solid #68c0e3;
 }
 
-body #garage-main #middle-section-main #border-lining-e{
+body #garage-main #middle-section-garage-main #border-lining-e{
     position: absolute;
     left:60%;
     width:20%;
@@ -231,7 +231,7 @@ body #garage-main #middle-section-main #border-lining-e{
     border-right:15px solid  #7ec9e7;
 }
 
-body #garage-main #middle-section-main #border-lining-f{
+body #garage-main #middle-section-garage-main #border-lining-f{
     position: absolute;
     left:80%;
     width:20%;
@@ -241,7 +241,7 @@ body #garage-main #middle-section-main #border-lining-f{
 
 /*******************************************CARD OF THE VEHICLE SECTION****************************/
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn{
     position: fixed;
     bottom:1%;
     left:0;
@@ -259,17 +259,17 @@ body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn{
     display: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn:hover{
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn:hover{
     color: rgba(255, 255, 255, 1);
 }
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn span{
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn span{
     display: block;
     position:absolute;
     background: #2894ff;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn span:nth-child(1){
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn span:nth-child(1){
     left:0;
     bottom:0;
     width:1px;
@@ -279,13 +279,13 @@ body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn spa
     transition: transform 0.5s;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(1){
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(1){
     transform: scaleY(1);
     transform-origin: bottom;
     transition: transform 0.5s;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn span:nth-child(2){
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn span:nth-child(2){
     left:0;
     bottom:0;
     width:100%;
@@ -295,13 +295,13 @@ body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn spa
     transition: transform 0.5s;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(2){
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(2){
     transform: scaleX(1);
     transform-origin: left;
     transition: transform 0.5s;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn span:nth-child(3){
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn span:nth-child(3){
     right:0;
     bottom:0;
     width:1px;
@@ -312,14 +312,14 @@ body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn spa
     transition-delay: 0.5s;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(3){
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(3){
     transform: scaleY(1);
     transform-origin: bottom;
     transition: transform 0.5s;
     transition-delay: 0.5s;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn span:nth-child(4){
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn span:nth-child(4){
     left:0;
     top:0;
     width:100%;
@@ -330,14 +330,14 @@ body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn spa
     transition-delay: 0.5s;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(4){
+body #garage-main #left-section-garage-main #card-vehicle-section #occupy-space-btn:hover span:nth-child(4){
     transform: scaleX(1);
     transform-origin: left;
     transition: transform 0.5s;
     transition-delay: 0.5s;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #card-vehicle{
+body #garage-main #left-section-garage-main #card-vehicle-section #card-vehicle{
     position: absolute;
     top:5%;
     left:18%;
@@ -349,7 +349,7 @@ body #garage-main #left-section-main #card-vehicle-section #card-vehicle{
     line-height: 2em;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div{
     position: absolute;
     top:12%;
     left:10%;
@@ -361,21 +361,21 @@ body #garage-main #left-section-main #card-vehicle-section #logic-info-div{
     pointer-events: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #logic-info-lbl{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #logic-info-lbl{
     position: absolute;
     top:2%;
     left:10%;
     font-size: 1.5vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-model{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #car-model{
     position: absolute;
     top:13%;
     left:22%;
     font-size: 1.2vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-model-img{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #car-model-img{
     position: absolute;
     top:6%;
     left:60%;
@@ -383,7 +383,7 @@ body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-
     height:20%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-model-input{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #car-model-input{
     position: absolute;
     top:22%;
     left:9%;
@@ -398,14 +398,14 @@ body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-
     outline:none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-type{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #car-type{
     position: absolute;
     top:36%;
     left:23%;
     font-size: 1.2vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-type-img{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #car-type-img{
     position: absolute;
     top:29%;
     left:58%;
@@ -413,7 +413,7 @@ body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-
     height:20%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-type-input{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #car-type-input{
     position: absolute;
     top:45%;
     left:9%;
@@ -429,14 +429,14 @@ body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-
 }
 
 /*  */
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-name{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #owner-name{
     position: absolute;
     top:59%;
     left:15%;
     font-size: 1.2vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-name-img{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #owner-name-img{
     position: absolute;
     top:58%;
     left:65%;
@@ -444,7 +444,7 @@ body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owne
     height:10%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-name-input{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #owner-name-input{
     position: absolute;
     top:69%;
     left:9%;
@@ -460,14 +460,14 @@ body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owne
 }
 
 /*  */
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-address{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #owner-address{
     position: absolute;
     top:82%;
     left:15%;
     font-size: 1.2vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-address-img{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #owner-address-img{
     position: absolute;
     top:80%;
     left:75%;
@@ -475,7 +475,7 @@ body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owne
     height:8%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-address-input{
+body #garage-main #left-section-garage-main #card-vehicle-section #logic-info-div #owner-address-input{
     position: absolute;
     top:90%;
     left:9%;
@@ -490,7 +490,7 @@ body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owne
     outline:none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #km-run-div{
+body #garage-main #left-section-garage-main #card-vehicle-section #km-run-div{
     position: absolute;
     top:60%;
     left:10%;
@@ -502,14 +502,14 @@ body #garage-main #left-section-main #card-vehicle-section #km-run-div{
     pointer-events: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #km-run-div label{
+body #garage-main #left-section-garage-main #card-vehicle-section #km-run-div label{
     position: absolute;
     top:15%;
     left:10%;
     font-size: 1.5vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #km-run-div img{
+body #garage-main #left-section-garage-main #card-vehicle-section #km-run-div img{
     position: absolute;
     top:15%;
     left:73%;
@@ -517,7 +517,7 @@ body #garage-main #left-section-main #card-vehicle-section #km-run-div img{
     height:25%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #km-run-div input{
+body #garage-main #left-section-garage-main #card-vehicle-section #km-run-div input{
     position: absolute;
     top:50%;
     left:15%;
@@ -532,11 +532,11 @@ body #garage-main #left-section-main #card-vehicle-section #km-run-div input{
     font-size: 1.5vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #km-run-div input:focus{
+body #garage-main #left-section-garage-main #card-vehicle-section #km-run-div input:focus{
     outline: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div{
     position: absolute;
     top:76%;
     left:10%;
@@ -548,21 +548,21 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div{
     pointer-events: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #spare-parts-lbl{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #spare-parts-lbl{
     position: absolute;
     top:5%;
     left:25%;
     font-size: 1.5vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #battery-lbl{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #battery-lbl{
     position: absolute;
     top:15%;
     left:30%;
     font-size: 1.2vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #battery-img{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #battery-img{
     position: absolute;
     top:13%;
     left:58%;
@@ -570,7 +570,7 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #bat
     height:8%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #battery-replace-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #battery-replace-btn{
     position: absolute;
     top:22%;
     left:15%;
@@ -578,7 +578,7 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #bat
     height:6%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #battery-good-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #battery-good-btn{
     position: absolute;
     top:22%;
     right:15%;
@@ -586,8 +586,8 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #bat
     height:6%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #battery-replace-btn,
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #battery-good-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #battery-replace-btn,
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #battery-good-btn{
     border-radius:5px;
     color:#2A2b2dff;
     cursor: pointer;
@@ -596,19 +596,19 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #bat
     border:none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #battery-replace-btn:focus,
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #battery-good-btn:focus{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #battery-replace-btn:focus,
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #battery-good-btn:focus{
     outline: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #brakes-lbl{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #brakes-lbl{
     position: absolute;
     top:33%;
     left:32%;
     font-size: 1.2vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #brake-img{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #brake-img{
     position: absolute;
     top:33%;
     left:56%;
@@ -616,7 +616,7 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #bra
     height:5%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #brake-replace-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #brake-replace-btn{
     position: absolute;
     top:40%;
     left:15%;
@@ -624,7 +624,7 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #bra
     height:6%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #brake-good-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #brake-good-btn{
     position: absolute;
     top:40%;
     right:15%;
@@ -632,8 +632,8 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #bra
     height:6%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #brake-replace-btn,
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #brake-good-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #brake-replace-btn,
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #brake-good-btn{
     border-radius:5px;
     color:#2A2b2dff;
     cursor: pointer;
@@ -642,19 +642,19 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #bra
     border:none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #brake-replace-btn:focus,
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #brake-good-btn:focus{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #brake-replace-btn:focus,
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #brake-good-btn:focus{
     outline: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #light-lbl{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #light-lbl{
     position: absolute;
     top:50%;
     left:20%;
     font-size: 1.2vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #light-img{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #light-img{
     position: absolute;
     top:50%;
     left:60%;
@@ -662,7 +662,7 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #lig
     height:5%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #light-replace-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #light-replace-btn{
     position: absolute;
     top:56%;
     left:15%;
@@ -670,7 +670,7 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #lig
     height:6%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #light-good-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #light-good-btn{
     position: absolute;
     top:56%;
     right:15%;
@@ -678,8 +678,8 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #lig
     height:6%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #light-replace-btn,
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #light-good-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #light-replace-btn,
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #light-good-btn{
     border-radius:5px;
     color:#2A2b2dff;
     cursor: pointer;
@@ -688,20 +688,20 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #lig
     border:none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #light-replace-btn:focus,
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #light-good-btn:focus{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #light-replace-btn:focus,
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #light-good-btn:focus{
     outline: none;
 }
 
 /*  */
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-lbl{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #windshield-lbl{
     position: absolute;
     top:68%;
     left:20%;
     font-size: 1.2vw;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-img{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #windshield-img{
     position: absolute;
     top:68%;
     left:64%;
@@ -709,7 +709,7 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #win
     height:5%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-replace-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #windshield-replace-btn{
     position: absolute;
     top:74%;
     left:15%;
@@ -717,7 +717,7 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #win
     height:6%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-good-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #windshield-good-btn{
     position: absolute;
     top:74%;
     right:15%;
@@ -725,8 +725,8 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #win
     height:6%;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-replace-btn,
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-good-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #windshield-replace-btn,
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #windshield-good-btn{
     border-radius:5px;
     color:#2A2b2dff;
     cursor: pointer;
@@ -735,12 +735,12 @@ body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #win
     border:none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-replace-btn:focus,
-body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-good-btn:focus{
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #windshield-replace-btn:focus,
+body #garage-main #left-section-garage-main #card-vehicle-section #spare-parts-div #windshield-good-btn:focus{
     outline: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #car-acts-div{
+body #garage-main #left-section-garage-main #card-vehicle-section #car-acts-div{
     position: absolute;
     top:75%;
     left:10%;
@@ -752,7 +752,7 @@ body #garage-main #left-section-main #card-vehicle-section #car-acts-div{
     pointer-events: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div{
+body #garage-main #left-section-garage-main #card-vehicle-section #finalize-cancel-div{
     position:fixed;
     bottom:0;
     left:0;
@@ -764,7 +764,7 @@ body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div{
     display:none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div #done-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #finalize-cancel-div #done-btn{
     position:absolute;
     top:15%;
     left:10%;
@@ -778,16 +778,16 @@ body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div 
     transition: 0.5s;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div #done-btn:focus{
+body #garage-main #left-section-garage-main #card-vehicle-section #finalize-cancel-div #done-btn:focus{
     outline: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div #done-btn:hover{
+body #garage-main #left-section-garage-main #card-vehicle-section #finalize-cancel-div #done-btn:hover{
     color:#fff;
     border:1px solid #00cc00;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div #cancel-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #finalize-cancel-div #cancel-btn{
     position:absolute;
     top:15%;
     right:10%;
@@ -801,16 +801,16 @@ body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div 
     transition: 0.5s;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div #cancel-btn:focus{
+body #garage-main #left-section-garage-main #card-vehicle-section #finalize-cancel-div #cancel-btn:focus{
     outline: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #finalize-cancel-div #cancel-btn:hover{
+body #garage-main #left-section-garage-main #card-vehicle-section #finalize-cancel-div #cancel-btn:hover{
     color:#fff;
     border:1px solid #cc0000;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #edit-info-btn{
+body #garage-main #left-section-garage-main #card-vehicle-section #edit-info-btn{
     position:fixed;
     bottom:0;
     left:0;
@@ -828,20 +828,20 @@ body #garage-main #left-section-main #card-vehicle-section #edit-info-btn{
     display: none;
 }
 
-body #garage-main #left-section-main #card-vehicle-section #edit-info-btn:hover{
+body #garage-main #left-section-garage-main #card-vehicle-section #edit-info-btn:hover{
     color:#fff;
     border-top:1px solid #2DA8D8FF;
     border-bottom:1px solid #2DA8D8FF;
 }
 
 /*******************************************SERVICE ORDER CARD SECTION****************************/
-/* body #garage-main #left-section-main #card-vehicle-section{
+/* body #garage-main #left-section-garage-main #card-vehicle-section{
     display: none;
 } */
-body #garage-main #left-section-main #service-card-section{
+body #garage-main #left-section-garage-main #service-card-section{
     display: none;
 }
-body #garage-main #left-section-main #service-card-section #service-card{
+body #garage-main #left-section-garage-main #service-card-section #service-card{
     position: absolute;
     top:5%;
     left:18%;
@@ -853,7 +853,7 @@ body #garage-main #left-section-main #service-card-section #service-card{
     line-height: 2em;
 }
 
-body #garage-main #left-section-main #service-card-section #service-time-div{
+body #garage-main #left-section-garage-main #service-card-section #service-time-div{
     position: absolute;
     top:12%;
     left:10%;
@@ -864,14 +864,14 @@ body #garage-main #left-section-main #service-card-section #service-time-div{
     pointer-events: none;
 }
 
-body #garage-main #left-section-main #service-card-section #service-time-div #service-time-lbl{
+body #garage-main #left-section-garage-main #service-card-section #service-time-div #service-time-lbl{
     position: absolute;
     top:10%;
     left:12%;
     font-size: 1.5vw;
 }
 
-body #garage-main #left-section-main #service-card-section #service-time-div #service-time-input{
+body #garage-main #left-section-garage-main #service-card-section #service-time-div #service-time-input{
     position: absolute;
     top: 45%;
     left:9%;
@@ -886,7 +886,7 @@ body #garage-main #left-section-main #service-card-section #service-time-div #se
     outline:none;
 }
 
-body #garage-main #left-section-main #service-card-section #date-leave-div{
+body #garage-main #left-section-garage-main #service-card-section #date-leave-div{
     position: absolute;
     top:30%;
     left:10%;
@@ -898,14 +898,14 @@ body #garage-main #left-section-main #service-card-section #date-leave-div{
     pointer-events: none;
 }
 
-body #garage-main #left-section-main #service-card-section #date-leave-div #date-leave-lbl{
+body #garage-main #left-section-garage-main #service-card-section #date-leave-div #date-leave-lbl{
     position: absolute;
     top:10%;
     left:12%;
     font-size: 1.5vw;
 }
 
-body #garage-main #left-section-main #service-card-section #date-leave-div #date-leave-input{
+body #garage-main #left-section-garage-main #service-card-section #date-leave-div #date-leave-input{
     position: absolute;
     top: 45%;
     left:9%;
@@ -920,7 +920,7 @@ body #garage-main #left-section-main #service-card-section #date-leave-div #date
     outline:none;
 }
 
-body #garage-main #left-section-main #service-card-section #scheduled-acts-div{
+body #garage-main #left-section-garage-main #service-card-section #scheduled-acts-div{
     position: absolute;
     top:48%;
     left:10%;
@@ -932,14 +932,14 @@ body #garage-main #left-section-main #service-card-section #scheduled-acts-div{
     pointer-events: none;
 }
 
-body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-1{
+body #garage-main #left-section-garage-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-1{
     position: absolute;
     top:10%;
     left:12%;
     font-size: 1.5vw;
 }
 
-body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-1{
+body #garage-main #left-section-garage-main #service-card-section #scheduled-acts-div #scheduled-acts-input-1{
     position: absolute;
     top: 21%;
     left:9%;
@@ -954,14 +954,14 @@ body #garage-main #left-section-main #service-card-section #scheduled-acts-div #
     outline:none;
 }
 
-body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-2{
+body #garage-main #left-section-garage-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-2{
     position: absolute;
     top:40%;
     left:12%;
     font-size: 1.5vw;
 }
 
-body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-2{
+body #garage-main #left-section-garage-main #service-card-section #scheduled-acts-div #scheduled-acts-input-2{
     position: absolute;
     top: 50%;
     left:9%;
@@ -976,14 +976,14 @@ body #garage-main #left-section-main #service-card-section #scheduled-acts-div #
     outline:none;
 }
 
-body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-3{
+body #garage-main #left-section-garage-main #service-card-section #scheduled-acts-div #scheduled-acts-lbl-3{
     position: absolute;
     top:68%;
     left:12%;
     font-size: 1.5vw;
 }
 
-body #garage-main #left-section-main #service-card-section #scheduled-acts-div #scheduled-acts-input-3{
+body #garage-main #left-section-garage-main #service-card-section #scheduled-acts-div #scheduled-acts-input-3{
     position: absolute;
     top: 80%;
     left:9%;
@@ -998,7 +998,7 @@ body #garage-main #left-section-main #service-card-section #scheduled-acts-div #
     outline:none;
 }
 
-body #garage-main #right-section-main{
+body #garage-main #right-section-garage-main{
     position:absolute;
     top:6%;
     right:-25%;
@@ -1010,7 +1010,7 @@ body #garage-main #right-section-main{
     overflow: auto;
 }
 
-body #garage-main #right-section-main .garage-spaces{
+body #garage-main #right-section-garage-main .garage-spaces{
     width:20%;
     height:15%;
     border:1px solid #2A2B2DFF;

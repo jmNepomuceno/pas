@@ -27,6 +27,126 @@
         </main>
         
         <main id="garage-main">
+            <section id="left-section-garage-main">
+                <div id="border-lining"></div>
+                <img src="./imgs/bars_b.png" id="bars-div">
+                <div id="bars-body-div">
+                    <label>Card of the Vehicle</label>
+                    <label>Service Order Card</label>
+                    <label>Delivery Note</label>
+                </div>
+
+                <div id="card-vehicle-section">
+                    <label id="card-vehicle">CARD OF THE VEHICLE</label>
+
+                    <div id="logic-info-div">
+                        <label id="logic-info-lbl">Logic Information</label>
+
+                        <label id="car-model">Car Model</label>
+                        <img src="./imgs/car-model.png" id="car-model-img">
+                        <input type="text" id="car-model-input" autocomplete="off">
+
+                        <label id="car-type">Car Type</label>
+                        <img src="./imgs/car-type.png" id="car-type-img">
+                        <input type="text" id="car-type-input" autocomplete="off">
+
+                        <label id="owner-name">Owner's Name</label>
+                        <img src="./imgs/owner-name.png" id="owner-name-img">
+                        <input type="text" id="owner-name-input" autocomplete="off">
+
+                        <label id="owner-address">Owner's Address</label>
+                        <img src="./imgs/owner-address.png" id="owner-address-img">
+                        <input type="text" id="owner-address-input" autocomplete="off">
+                    </div>
+
+                    <div id="km-run-div">
+                        <label>Kilometer Run</label>
+                        <img src="./imgs/kilometer.png">
+                        <input type="text" placeholder="0.0 km" id="km-run-input">
+                    </div>
+
+                    <div id="spare-parts-div">
+                        <label id="spare-parts-lbl">Spare Parts</label>
+
+                        <label id="battery-lbl">Battery</label>
+                        <img src="./imgs/accumulator.png" id="battery-img">
+                        <button id="battery-replace-btn">REPLACE</button>
+                        <button id="battery-good-btn">GOOD</button>
+
+                        <label id="brakes-lbl">Brakes</label>
+                        <img src="./imgs/break.png" id="brake-img">
+                        <button id="brake-replace-btn">REPLACE</button>
+                        <button id="brake-good-btn">GOOD</button>
+
+                        <label id="light-lbl">Car Lights</label>
+                        <img src="./imgs/car-light.png" id="light-img">
+                        <button id="light-replace-btn">REPLACE</button>
+                        <button id="light-good-btn">GOOD</button>
+
+                        <label id="windshield-lbl">Wind Shield</label>
+                        <img src="./imgs/windshield.png" id="windshield-img">
+                        <button id="windshield-replace-btn">REPLACE</button>
+                        <button id="windshield-good-btn">GOOD</button>
+                    </div>
+
+                    <a href="#" id="occupy-space-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        OCCUPY THIS SPACE
+                    </a>
+
+                    <div id="finalize-cancel-div">
+                        <button id="done-btn">DONE</button>
+                        <button id="cancel-btn">CANCEL</button>
+                    </div>
+
+                    <button id="edit-info-btn">EDIT INFORMATION</button>
+                </div>
+
+                <div id="service-card-section">
+                    <label id="service-card">SERVICE ORDER CARD</label>
+
+                    <div id="service-time-div">
+                        <label id="service-time-lbl">Time For Service</label>
+                        <input type="text" id="service-time-input">
+                    </div>
+
+                    <div id="date-leave-div">
+                        <label id="date-leave-lbl">Date for Leaving</label>
+                        <input type="text" id="date-leave-input">
+                    </div>
+
+                    <div id="scheduled-acts-div">
+                        <label id="scheduled-acts-lbl-1">Activity 1</label>
+                        <input type="text" id="scheduled-acts-input-1">
+
+                        <label id="scheduled-acts-lbl-2">Activity 2</label>
+                        <input type="text" id="scheduled-acts-input-2">
+
+                        <label id="scheduled-acts-lbl-3">Activity 3</label>
+                        <input type="text" id="scheduled-acts-input-3">
+                    </div>
+                    
+                </div>
+
+            </section>
+
+            <section id="middle-section-garage-main">
+                <div id="border-lining-b"></div>
+                <div id="border-lining-c"></div>
+                <div id="border-lining-d"></div>
+                <div id="border-lining-e"></div>
+                <div id="border-lining-f"></div>
+            </section>
+
+            <section id="right-section-garage-main">
+                
+            </section>
+        </main>
+
+        <!-- <main id="inquire-main">
             <section id="left-section-main">
                 <div id="border-lining"></div>
                 <img src="./imgs/bars_b.png" id="bars-div">
@@ -89,10 +209,6 @@
                         <button id="windshield-good-btn">GOOD</button>
                     </div>
 
-                    <!-- <div id="car-acts-div">
-                        <label id="car-acts-lbl">Car Activities</label>
-                    </div> -->
-
                     <a href="#" id="occupy-space-btn">
                         <span></span>
                         <span></span>
@@ -148,131 +264,7 @@
             <section id="right-section-main">
                 
             </section>
-        </main>
-
-        <main id="inquire-main">
-            <section id="left-section-main">
-                <div id="border-lining"></div>
-                <img src="./imgs/bars_b.png" id="bars-div">
-                <div id="bars-body-div">
-                    <label>Card of the Vehicle</label>
-                    <label>Service Order Card</label>
-                    <label>Delivery Note</label>
-                </div>
-
-                <div id="card-vehicle-section">
-                    <label id="card-vehicle">CARD OF THE VEHICLE</label>
-
-                    <div id="logic-info-div">
-                        <label id="logic-info-lbl">Logic Information</label>
-
-                        <label id="car-model">Car Model</label>
-                        <img src="./imgs/car-model.png" id="car-model-img">
-                        <input type="text" id="car-model-input" autocomplete="off">
-
-                        <label id="car-type">Car Type</label>
-                        <img src="./imgs/car-type.png" id="car-type-img">
-                        <input type="text" id="car-type-input" autocomplete="off">
-
-                        <label id="owner-name">Owner's Name</label>
-                        <img src="./imgs/owner-name.png" id="owner-name-img">
-                        <input type="text" id="owner-name-input" autocomplete="off">
-
-                        <label id="owner-address">Owner's Address</label>
-                        <img src="./imgs/owner-address.png" id="owner-address-img">
-                        <input type="text" id="owner-address-input" autocomplete="off">
-                    </div>
-
-                    <div id="km-run-div">
-                        <label>Kilometer Run</label>
-                        <img src="./imgs/kilometer.png">
-                        <input type="text" placeholder="0.0 km" id="km-run-input">
-                    </div>
-
-                    <div id="spare-parts-div">
-                        <label id="spare-parts-lbl">Spare Parts</label>
-
-                        <label id="battery-lbl">Battery</label>
-                        <img src="./imgs/accumulator.png" id="battery-img">
-                        <button id="battery-replace-btn">REPLACE</button>
-                        <button id="battery-good-btn">GOOD</button>
-
-                        <label id="brakes-lbl">Brakes</label>
-                        <img src="./imgs/break.png" id="brake-img">
-                        <button id="brake-replace-btn">REPLACE</button>
-                        <button id="brake-good-btn">GOOD</button>
-
-                        <label id="light-lbl">Car Lights</label>
-                        <img src="./imgs/car-light.png" id="light-img">
-                        <button id="light-replace-btn">REPLACE</button>
-                        <button id="light-good-btn">GOOD</button>
-
-                        <label id="windshield-lbl">Wind Shield</label>
-                        <img src="./imgs/windshield.png" id="windshield-img">
-                        <button id="windshield-replace-btn">REPLACE</button>
-                        <button id="windshield-good-btn">GOOD</button>
-                    </div>
-
-                    <!-- <div id="car-acts-div">
-                        <label id="car-acts-lbl">Car Activities</label>
-                    </div> -->
-
-                    <a href="#" id="occupy-space-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        OCCUPY THIS SPACE
-                    </a>
-
-                    <div id="finalize-cancel-div">
-                        <button id="done-btn">DONE</button>
-                        <button id="cancel-btn">CANCEL</button>
-                    </div>
-
-                    <button id="edit-info-btn">EDIT INFORMATION</button>
-                </div>
-
-                <div id="service-card-section">
-                    <label id="service-card">SERVICE ORDER CARD</label>
-
-                    <div id="service-time-div">
-                        <label id="service-time-lbl">Time For Service</label>
-                        <input type="text" id="service-time-input">
-                    </div>
-
-                    <div id="date-leave-div">
-                        <label id="date-leave-lbl">Date for Leaving</label>
-                        <input type="text" id="date-leave-input">
-                    </div>
-
-                    <div id="scheduled-acts-div">
-                        <label id="scheduled-acts-lbl-1">Activity 1</label>
-                        <input type="text" id="scheduled-acts-input-1">
-
-                        <label id="scheduled-acts-lbl-2">Activity 2</label>
-                        <input type="text" id="scheduled-acts-input-2">
-
-                        <label id="scheduled-acts-lbl-3">Activity 3</label>
-                        <input type="text" id="scheduled-acts-input-3">
-                    </div>
-                    
-                </div>
-
-            </section>
-
-            <section id="middle-section-main">
-                <div id="border-lining-b"></div>
-                <div id="border-lining-c"></div>
-                <div id="border-lining-d"></div>
-                <div id="border-lining-e"></div>
-                <div id="border-lining-f"></div>
-            </section>
-
-            <section id="right-section-main">
-                
-            </section>
-        </main>
+        </main> -->
 
         <script type="text/javascript" src="index.js" ></script>
     </body>
