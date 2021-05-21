@@ -49,7 +49,10 @@ const windshield_replace_btn = document.querySelector('body #garage-main #left-s
 const windshield_good_btn = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #spare-parts-div #windshield-good-btn')
 
 const logic_info_div = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div')
-
+const car_model_input_garage = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-model-input')
+const car_type_input_garage = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #car-type-input')
+const owner_name_input_garage = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-name-input')
+const owner_address_input_garage = document.querySelector('body #garage-main #left-section-main #card-vehicle-section #logic-info-div #owner-address-input')
 //service card section
 const service_time_input = document.querySelector('body #garage-main #left-section-main #service-card-section #service-time-div #service-time-input')
 const date_leave_input = document.querySelector('body #garage-main #left-section-main #service-card-section #date-leave-div #date-leave-input')
@@ -257,27 +260,27 @@ function garageHover(block){
     }
 
     if(garage_capacity[previous_click_block.textContent]['CarModel'] !== null){
-        car_model_input.value = garage_capacity[previous_click_block.textContent]['CarModel']
+        car_model_input_garage.value = garage_capacity[previous_click_block.textContent]['CarModel']
     }else{
-        car_model_input.value = ""
+        car_model_input_garage.value = ""
     }
 
     if(garage_capacity[previous_click_block.textContent]['CarType'] !== null){
-        car_type_input.value = garage_capacity[previous_click_block.textContent]['CarType']
+        car_type_input_garage.value = garage_capacity[previous_click_block.textContent]['CarType']
     }else{
-        car_type_input.value = ""
+        car_type_input_garage.value = ""
     }
 
     if(garage_capacity[previous_click_block.textContent]['OwnerName'] !== null){
-        owner_name_input.value = garage_capacity[previous_click_block.textContent]['OwnerName']
+        owner_name_input_garage.value = garage_capacity[previous_click_block.textContent]['OwnerName']
     }else{
-        owner_name_input.value = ""
+        owner_name_input_garage.value = ""
     }
 
     if(garage_capacity[previous_click_block.textContent]['OwnerAddress'] !== null){
-        owner_address_input.value = garage_capacity[previous_click_block.textContent]['OwnerAddress']
+        owner_address_input_garage.value = garage_capacity[previous_click_block.textContent]['OwnerAddress']
     }else{
-        owner_address_input.value = ""
+        owner_address_input_garage.value = ""
     }
 
     if(garage_capacity[previous_click_block.textContent]['TimeForService'] !== null){
@@ -604,8 +607,6 @@ add_new_div.addEventListener('click', function(){
 }, false)
 
 add_new_btn.addEventListener('click', function(){
-    console.log(garage_block_arr)
-    console.log(garage_capacity)
     if(car_model_input.value == ""){
         alert("Need to fill up everything")
         return 
@@ -630,6 +631,17 @@ add_new_btn.addEventListener('click', function(){
     garage_capacity[garage_block_arr[sched_counter]]['CarType'] = car_type_input.value
     garage_capacity[garage_block_arr[sched_counter]]['OwnerName'] = owner_name_input.value
     garage_capacity[garage_block_arr[sched_counter]]['OwnerAddress'] = owner_address_input.value
+
+    // add_new_div.style.top = '35%'
+    // add_new_div.style.left = '5%'
+    // add_new_div.style.width = '15%'
+    // add_new_div.style.height = '30%'
+
+    // add_new_lbl.style.display = 'block'
+    // add_new_img.style.display = 'block'
+
+    add_new_logic_info.style.display = 'none'
+    add_new_btn.style.display = 'none'
 }, false)
 
 
