@@ -1176,22 +1176,22 @@ body #schedule-main #schedule-body #add-new-sched #logic-info-div #logic-info-lb
 
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-model{
     position: absolute;
-    top:13%;
+    top:10%;
     left:22%;
     font-size: 1.2vw;
 }
 
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-model-img{
     position: absolute;
-    top:6%;
-    left:60%;
+    top:3%;
+    left:56%;
     width:13%;
     height:20%;
 }
 
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-model-input{
     position: absolute;
-    top:22%;
+    top:18%;
     left:9%;
     width:80%;
     height:9%;
@@ -1206,14 +1206,14 @@ body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-model-inp
 
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-type{
     position: absolute;
-    top:36%;
+    top:30%;
     left:23%;
     font-size: 1.2vw;
 }
 
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-type-img{
     position: absolute;
-    top:29%;
+    top:23%;
     left:58%;
     width:13%;
     height:20%;
@@ -1221,7 +1221,7 @@ body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-type-img{
 
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-type-input{
     position: absolute;
-    top:45%;
+    top:38%;
     left:9%;
     width:80%;
     height:9%;
@@ -1237,22 +1237,22 @@ body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-type-inpu
 /*  */
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-name{
     position: absolute;
-    top:59%;
+    top:50%;
     left:15%;
     font-size: 1.2vw;
 }
 
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-name-img{
     position: absolute;
-    top:58%;
-    left:65%;
+    top:47%;
+    left:63%;
     width:13%;
     height:10%;
 }
 
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-name-input{
     position: absolute;
-    top:69%;
+    top:58%;
     left:9%;
     width:80%;
     height:9%;
@@ -1268,14 +1268,14 @@ body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-name-in
 /*  */
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-address{
     position: absolute;
-    top:82%;
+    top:70%;
     left:15%;
     font-size: 1.2vw;
 }
 
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-address-img{
     position: absolute;
-    top:80%;
+    top:68%;
     left:75%;
     width:13%;
     height:8%;
@@ -1283,10 +1283,33 @@ body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-address
 
 body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-address-input{
     position: absolute;
-    top:90%;
+    top:77%;
     left:9%;
     width:80%;
     height:9%;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color:#a6a6a6;
+    text-align: center;
+    font-size: 1.5vw;
+    outline:none;
+}
+
+/*  */
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #time-to-sched{
+    position: absolute;
+    top:87%;
+    left:15%;
+    font-size: 1.2vw;
+}
+
+body #schedule-main #schedule-body #add-new-sched #logic-info-div #time-to-sched-input{
+    position: absolute;
+    top:92%;
+    left:9%;
+    width:80%;
+    height:5%;
     text-decoration: none;
     border-bottom: 1px solid white;
     background: transparent;

@@ -73,6 +73,7 @@ const schedule_main = document.querySelector('body #schedule-main')
 const schedule_body = document.querySelector('body #schedule-main #schedule-body')
 
 const current_day_div = document.querySelector('body #schedule-main #schedule-body #current-day-div')
+const current_day_div_lbl = document.querySelector('body #schedule-main #schedule-body #current-day-div #current-day-lbl')
 const current_day_div_1 = document.querySelector('body #schedule-main #schedule-body #current-day-div-1')
 const current_day_div_2 = document.querySelector('body #schedule-main #schedule-body #current-day-div-2')
 
@@ -88,6 +89,7 @@ const car_model_input = document.querySelector('body #schedule-main #schedule-bo
 const car_type_input = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div #car-type-input')
 const owner_name_input = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-name-input')
 const owner_address_input = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div #owner-address-input')
+const time_to_sched_input = document.querySelector('body #schedule-main #schedule-body #add-new-sched #logic-info-div #time-to-sched-input')
 
 const add_new_btn = document.querySelector('body #schedule-main #schedule-body #add-new-sched #add-new-sched-btn')
 const add_new_btn_cancel = document.querySelector('body #schedule-main #schedule-body #add-new-sched #cancel-new-sched-btn')
@@ -635,6 +637,26 @@ add_new_btn.addEventListener('click', function(){
     car_type_input.value = null
     owner_name_input.value = null
     owner_address_input.value = null
+
+    let currentDate = new Date();
+    var days_add = 4;
+    var futureDate = []
+
+    // currentDate.setDate(currentDate.getDate() + days_add); 
+
+    // var dd = currentDate.getDate();
+    // var mm = currentDate.getMonth() + 1;
+    // var y = currentDate.getFullYear();
+
+    // let modified_date = mm + '/'+ dd + '/'+ y
+
+    // // for(let i = 0; i < days_add; i++){
+    // //     futureDate.push(mm + '/'+ dd + '/'+ y)
+    // //     dd -= 1
+    // // }
+
+    // console.log(modified_date)
+    current_day_div_lbl.textContent = time_to_sched_input.value
 
 }, false)
 
