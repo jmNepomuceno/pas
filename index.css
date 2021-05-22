@@ -1048,7 +1048,7 @@ body #schedule-main #schedule-body{
     left:-100%;
     width:100%;
     height:94%;
-    background-color: #e99796;
+    background-color: #93d2eb;
     opacity: 0;
     transition: 1s;
     overflow: auto;
@@ -1065,25 +1065,25 @@ body #schedule-main #schedule-body #border-fade{
 body #schedule-main #schedule-body #border-fade #border-fade-1{
     width: 100%;
     height:25%;
-    background:#d9514eff;
+    background:#3dafdb;
 }
 
 body #schedule-main #schedule-body #border-fade #border-fade-2{
     width: 100%;
     height:25%;
-    background:#db5957;
+    background:#53b7df;
 }
 
 body #schedule-main #schedule-body #border-fade #border-fade-3{
     width: 100%;
     height:25%;
-    background:#e06e6c;
+    background:#68c0e3;
 }
 
 body #schedule-main #schedule-body #border-fade #border-fade-4{
     width: 100%;
     height:25%;
-    background:#e48281;
+    background:#7ec9e7;
 }
 
 body #schedule-main #schedule-body #add-new-sched{
@@ -1311,7 +1311,6 @@ body #schedule-main #schedule-body #add-new-sched #logic-info-div #time-to-sched
     width:80%;
     height:5%;
     text-decoration: none;
-    border-bottom: 1px solid white;
     background: transparent;
     color:#a6a6a6;
     text-align: center;
@@ -1325,7 +1324,7 @@ body #schedule-main #schedule-body #current-day-div{
     left:38%;
     width:25%;
     height:50%;
-    border:8px solid #1a1a1a;
+    border:8px solid #2DA8D8FF;
     transition: 1s;
     border-radius: 10px;
     background-color: #595959;
@@ -1346,7 +1345,9 @@ body #schedule-main #schedule-body #current-day-div-2 #current-day-lbl-2{
     text-align: center;
 }
 
-body #schedule-main #schedule-body #current-day-div .queue-sched{
+body #schedule-main #schedule-body #current-day-div .queue-sched,
+body #schedule-main #schedule-body #current-day-div-1 .queue-sched,
+body #schedule-main #schedule-body #current-day-div-2 .queue-sched{
     position: absolute;
     left:5%;
     width:90%;
@@ -1363,7 +1364,7 @@ body #schedule-main #schedule-body #current-day-div-1{
     left:65%;
     width:10%;
     height:20%;
-    border:8px solid #1a1a1a;
+    border:8px solid #2DA8D8FF;
     transition: 1s;
     border-radius: 10px;
     background-color: #595959;
@@ -1375,7 +1376,7 @@ body #schedule-main #schedule-body #current-day-div-2{
     left:78%;
     width:10%;
     height:20%;
-    border:8px solid #1a1a1a;
+    border:8px solid #2DA8D8FF;
     transition: 1s;
     border-radius: 10px;
     background-color: #595959;
@@ -1398,4 +1399,19 @@ body #schedule-main #schedule-body .arrow-left {
 
 body #schedule-main #schedule-body .arrow-left:hover{
     opacity: 1;
+}
+
+body #home-main #navigation-section #garage-notif{
+    position: absolute;
+    top:5%;
+    left:15.8%;
+    width:2%;
+    height: 50%;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3vw;
+    text-align: center;
+    display: none;
 }

@@ -66,6 +66,8 @@ const garage_spaces_divs = document.querySelectorAll('body #garage-main #right-s
 
 const right_section_main = document.getElementById('right-section-main')
 
+const garage_notif = document.querySelector('body #home-main #navigation-section #garage-notif')
+
 /*****************************************GARAGE*************************************************/
 
 const schedule_main = document.querySelector('body #schedule-main')
@@ -98,6 +100,7 @@ const add_new_btn_cancel = document.querySelector('body #schedule-main #schedule
 
 let sched_counter = 0
 let garage_block_arr = []
+let sched_counter_curr = 0
 
 for(let i = 1; i <= 10; i++){
     for(let j = 1; j <= 4; j++){
@@ -202,7 +205,7 @@ function garageHover(block){
 
     let free_occupied = garage_capacity[previous_click_block.textContent]['Availability']
 
-    if(free_occupied == 'FREE'){
+    if(free_occupied == 'FREE' && sched_counter_curr > 0){
         occupy_space.style.display = 'block'
     }else{
         occupy_space.style.display = 'none'
@@ -470,6 +473,16 @@ occupy_done_btn.addEventListener('click', function(){
         }
     }
 
+    let remove_sched = document.getElementById('queue-sched-' + sched_counter)
+    remove_sched.remove()
+
+    sched_counter_curr -= 1
+    sched_counter -= 1
+    if(sched_counter_curr == 0){
+        garage_notif.style.display = 'none'
+    }
+    garage_notif.textContent = sched_counter_curr
+
     alert("You can now view all the designated dates on the Service Order Card. Just click the navigation bars icon on the left side.")
 
     console.log(garage_capacity)
@@ -594,7 +607,10 @@ add_new_img.addEventListener('click', function(){
     add_new_btn.style.display = 'block'
     add_new_btn_cancel.style.display = 'block'
 }, false)
+
 let new_sched_top_style = 20
+let new_sched_top_style_1 = 20
+let new_sched_top_style_2 = 20
 add_new_btn.addEventListener('click', function(){
     if(car_model_input.value == ""){
         alert("Need to fill up everything")
@@ -617,13 +633,12 @@ add_new_btn.addEventListener('click', function(){
     }
     let get_day = parseInt(time_to_sched_input.value[time_to_sched_input.value.length - 2] + time_to_sched_input.value[time_to_sched_input.value.length - 1])
     let get_curr_day = new Date()
-    console.log(get_day > get_curr_day.getDate() + 3)
-    console.log(get_day < get_curr_day.getDate())
+
     if(time_to_sched_input.value == ""){
         alert("Need to fill up everything")
         return 
-    }else if(get_day > get_curr_day.getDate() + 3 || get_day < get_curr_day.getDate()){
-        alert("Choose only up to 3 days from now :)")
+    }else if(get_day > get_curr_day.getDate() + 2 || get_day < get_curr_day.getDate()){
+        alert("Choose only up to 2 days from now :)")
         return
     }
 
@@ -646,14 +661,43 @@ add_new_btn.addEventListener('click', function(){
     add_new_btn.style.display = 'none'
     add_new_btn_cancel.style.display = 'none'
 
-    let block = document.createElement('label')
+    if(get_day == get_curr_day.getDate()){
+        let block = document.createElement('label')
     
-    block.className = 'queue-sched'
-    block.id = 'queue-sched-' + sched_counter
-    block.textContent = garage_block_arr[sched_counter - 1] + " | " + owner_name_input.value
-    current_day_div.appendChild(block)
-    document.getElementById('queue-sched-' + sched_counter).style.top = new_sched_top_style + '%'
-    new_sched_top_style += 15
+        block.className = 'queue-sched'
+        block.id = 'queue-sched-' + sched_counter
+        block.textContent = garage_block_arr[sched_counter - 1] + " | " + owner_name_input.value
+        current_day_div.appendChild(block)
+        document.getElementById('queue-sched-' + sched_counter).style.top = new_sched_top_style + '%'
+        new_sched_top_style += 15
+        sched_counter_curr += 1
+
+        garage_notif.style.display = 'block'
+        garage_notif.textContent = sched_counter_curr
+    }
+
+    if(get_day == get_curr_day.getDate() + 1){
+        let block = document.createElement('label')
+    
+        block.className = 'queue-sched'
+        block.id = 'queue-sched-' + sched_counter
+        block.textContent = garage_block_arr[sched_counter - 1] + " | " + owner_name_input.value
+        current_day_div_1.appendChild(block)
+        document.getElementById('queue-sched-' + sched_counter).style.top = new_sched_top_style_1 + '%'
+        new_sched_top_style_1 += 15
+    }
+
+    if(get_day == get_curr_day.getDate() + 2){
+        let block = document.createElement('label')
+    
+        block.className = 'queue-sched'
+        block.id = 'queue-sched-' + sched_counter
+        block.textContent = garage_block_arr[sched_counter - 1] + " | " + owner_name_input.value
+        current_day_div_2.appendChild(block)
+        document.getElementById('queue-sched-' + sched_counter).style.top = new_sched_top_style_2 + '%'
+        new_sched_top_style_2 += 15
+    }
+
 
     car_model_input.value = null
     car_type_input.value = null
@@ -714,6 +758,10 @@ function closeGarage(){
 
 garage_h2.addEventListener('click', function(){
     indexTransitionShow()
+
+    if(garage_notif.style.display == 'block'){
+        alert('You can now occupy one slot on your garage.')
+    }
 
     garage_main.style.zIndex = '1'
     garage_main.style.visibility = 'visible'
