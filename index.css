@@ -1331,13 +1331,30 @@ body #schedule-main #schedule-body #current-day-div{
     background-color: #595959;
 }
 
-body #schedule-main #schedule-body #current-day-div #current-day-lbl{
+body #schedule-main #schedule-body #current-day-div #current-day-lbl,
+body #schedule-main #schedule-body #current-day-div-1 #current-day-lbl-1,
+body #schedule-main #schedule-body #current-day-div-2 #current-day-lbl-2{
     position: absolute;
     top:5%;
-    left:23%;
+    left:20%;
     color:white;
     opacity: 0.6;
     font-size: 2vw;
+    width:60%;
+    height:10%;
+    border-bottom:1px solid white;
+    text-align: center;
+}
+
+body #schedule-main #schedule-body #current-day-div .queue-sched{
+    position: absolute;
+    left:5%;
+    width:90%;
+    height:10%;
+    border-bottom: 1px solid white;
+    text-align: center;
+    color:#fff;
+    font-size: 1.5vw;
 }
 
 body #schedule-main #schedule-body #current-day-div-1{

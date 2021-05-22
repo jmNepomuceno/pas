@@ -75,7 +75,9 @@ const schedule_body = document.querySelector('body #schedule-main #schedule-body
 const current_day_div = document.querySelector('body #schedule-main #schedule-body #current-day-div')
 const current_day_div_lbl = document.querySelector('body #schedule-main #schedule-body #current-day-div #current-day-lbl')
 const current_day_div_1 = document.querySelector('body #schedule-main #schedule-body #current-day-div-1')
+const current_day_div_lbl_1 = document.querySelector('body #schedule-main #schedule-body #current-day-div-1 #current-day-lbl-1')
 const current_day_div_2 = document.querySelector('body #schedule-main #schedule-body #current-day-div-2')
+const current_day_div_lbl_2 = document.querySelector('body #schedule-main #schedule-body #current-day-div-2 #current-day-lbl-2')
 
 const arrow_left_day = document.querySelector('body #schedule-main #schedule-body .arrow-left')
 
@@ -592,7 +594,7 @@ add_new_img.addEventListener('click', function(){
     add_new_btn.style.display = 'block'
     add_new_btn_cancel.style.display = 'block'
 }, false)
-
+let new_sched_top_style = 20
 add_new_btn.addEventListener('click', function(){
     if(car_model_input.value == ""){
         alert("Need to fill up everything")
@@ -612,6 +614,17 @@ add_new_btn.addEventListener('click', function(){
     if(owner_address_input.value == ""){
         alert("Need to fill up everything")
         return 
+    }
+    let get_day = parseInt(time_to_sched_input.value[time_to_sched_input.value.length - 2] + time_to_sched_input.value[time_to_sched_input.value.length - 1])
+    let get_curr_day = new Date()
+    console.log(get_day > get_curr_day.getDate() + 3)
+    console.log(get_day < get_curr_day.getDate())
+    if(time_to_sched_input.value == ""){
+        alert("Need to fill up everything")
+        return 
+    }else if(get_day > get_curr_day.getDate() + 3 || get_day < get_curr_day.getDate()){
+        alert("Choose only up to 3 days from now :)")
+        return
     }
 
     garage_capacity[garage_block_arr[sched_counter]]['CarModel'] = car_model_input.value
@@ -633,30 +646,19 @@ add_new_btn.addEventListener('click', function(){
     add_new_btn.style.display = 'none'
     add_new_btn_cancel.style.display = 'none'
 
+    let block = document.createElement('label')
+    
+    block.className = 'queue-sched'
+    block.id = 'queue-sched-' + sched_counter
+    block.textContent = garage_block_arr[sched_counter - 1] + " | " + owner_name_input.value
+    current_day_div.appendChild(block)
+    document.getElementById('queue-sched-' + sched_counter).style.top = new_sched_top_style + '%'
+    new_sched_top_style += 15
+
     car_model_input.value = null
     car_type_input.value = null
     owner_name_input.value = null
     owner_address_input.value = null
-
-    let currentDate = new Date();
-    var days_add = 4;
-    var futureDate = []
-
-    // currentDate.setDate(currentDate.getDate() + days_add); 
-
-    // var dd = currentDate.getDate();
-    // var mm = currentDate.getMonth() + 1;
-    // var y = currentDate.getFullYear();
-
-    // let modified_date = mm + '/'+ dd + '/'+ y
-
-    // // for(let i = 0; i < days_add; i++){
-    // //     futureDate.push(mm + '/'+ dd + '/'+ y)
-    // //     dd -= 1
-    // // }
-
-    // console.log(modified_date)
-    current_day_div_lbl.textContent = time_to_sched_input.value
 
 }, false)
 
@@ -766,6 +768,30 @@ schedule_h2.addEventListener('click', function(){
 
     schedule_body.style.opacity = '1'
     schedule_body.style.left = "0"
+
+    let currentDate = new Date();
+    let box_1_date = new Date();
+    let box_2_date = new Date();
+
+    box_1_date.setDate(box_1_date.getDate() + 1); 
+    box_2_date.setDate(box_2_date.getDate() + 2); 
+
+    var dd = currentDate.getDate();
+    var mm = currentDate.getMonth() + 1;
+    var y = currentDate.getFullYear();
+
+    var dd_1 = box_1_date.getDate();
+    var mm_1 = box_1_date.getMonth() + 1;
+    var y_1 = box_1_date.getFullYear();
+
+    var dd_2 = box_2_date.getDate();
+    var mm_2 = box_2_date.getMonth() + 1;
+    var y_2 = box_2_date.getFullYear();
+
+    current_day_div_lbl.textContent = y + '/'+ mm + '/'+ dd
+    current_day_div_lbl_1.textContent = y_1 + '/'+ mm_1 + '/'+ dd_1
+    current_day_div_lbl_2.textContent = y_2 + '/'+ mm_2 + '/'+ dd_2
+
     closeGarage()
 }, false)
 
