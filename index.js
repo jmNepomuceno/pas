@@ -473,7 +473,16 @@ occupy_done_btn.addEventListener('click', function(){
         }
     }
 
-    let remove_sched = document.getElementById('queue-sched-' + sched_counter)
+    let get_the_garage_id
+    for(let i = 0; i < garage_block_arr.length; i++){
+        if(garage_block_arr[i] == previous_click_block.textContent){
+            get_the_garage_id = i + 1
+        }
+    }
+
+    console.log(get_the_garage_id)
+
+    let remove_sched = document.getElementById('queue-sched-' + get_the_garage_id)
     remove_sched.remove()
 
     sched_counter_curr -= 1
