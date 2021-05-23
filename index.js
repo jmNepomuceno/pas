@@ -101,6 +101,7 @@ const add_new_btn_cancel = document.querySelector('body #schedule-main #schedule
 let sched_counter = 0
 let garage_block_arr = []
 let sched_counter_curr = 0
+let current_slot_garage = []
 
 for(let i = 1; i <= 10; i++){
     for(let j = 1; j <= 4; j++){
@@ -205,7 +206,7 @@ function garageHover(block){
 
     let free_occupied = garage_capacity[previous_click_block.textContent]['Availability']
 
-    if(free_occupied == 'FREE' && sched_counter_curr > 0){
+    if(free_occupied == 'FREE' && sched_counter_curr > 0 && current_slot_garage.includes(previous_click_block.textContent)){
         occupy_space.style.display = 'block'
     }else{
         occupy_space.style.display = 'none'
@@ -676,6 +677,7 @@ add_new_btn.addEventListener('click', function(){
         block.className = 'queue-sched'
         block.id = 'queue-sched-' + sched_counter
         block.textContent = garage_block_arr[sched_counter - 1] + " | " + owner_name_input.value
+        current_slot_garage.push(garage_block_arr[sched_counter - 1])
         current_day_div.appendChild(block)
         document.getElementById('queue-sched-' + sched_counter).style.top = new_sched_top_style + '%'
         new_sched_top_style += 15
